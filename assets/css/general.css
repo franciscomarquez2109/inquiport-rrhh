@@ -1,0 +1,65 @@
+*{
+	margin: 0%;
+	padding: 0%;
+	box-sizing: border-box;
+}
+body{
+	background-color: #f1f2f6;
+}
+
+
+.form{
+	margin-top: 10%;
+}
+
+.form-recover-pw{
+	margin-top: 15%;
+}
+form .form-group h1,{
+	text-align: center;
+	margin-bottom: 1em;
+}
+h4{
+	font-family: 'Julius Sans One', sans-serif;
+	text-align: center;
+	color: #4A4E4D;
+	font-size: 25px;
+}
+.navbar-header a{
+	font-family: 'Fjalla One', sans-serif;
+}
+.container-visita h1{
+	font-family: 'Fjalla One', sans-serif;
+}
+
+/*campos del formulario login usuario y contraseña*/
+.input-user{
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	border-bottom: none;
+}
+.input-pass{
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+}
+.input-user, .input-pass,.select-user{
+	height: 45px;
+}
+
+.container-img{
+	width: 10%;
+	height: 100px;
+	margin: auto;
+}
+
+.info-error{
+	text-align: center;
+	color: #F8D9D5;
+}
+.a-user{
+	color:#25373D;
+}
+
+
+
+
