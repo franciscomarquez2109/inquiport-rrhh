@@ -45,7 +45,7 @@ include_once ('../modelo/m_estado.php');
                 <div class="box-body">
                   <form>
                   <div class="form-group row">
-                    <div class="col-xs-2">
+                    <div class="col-xs-12 col-md-2">
                         <div class="input-group">
                           <input type="text" name="cedula_insured" id="cedula_insured" class="form-control" placeholder="Buscar cedula" autofocus>
                           <div class="input-group-btn">
@@ -55,8 +55,8 @@ include_once ('../modelo/m_estado.php');
                           </div>
                         </div>
                       </div>
-                      <div class="col-xs-4">
-                        <div class="input-group col-xs-12">
+                      <div class="col-xs-12 col-md-4">
+                        <div class="input-group col-xs-12 col-md-12">
                           <input type="text" class="form-control" id="Nombre_insured" placeholder="Nombres del Asegurado" readOnly>
                           <input type="hidden" class="form-control" id="id_insured" name="id_insured" readOnly>
                           <input class="form-control input-sm" id="tipo_nomina" name="tipo_nomina" type="hidden" readOnly>
@@ -65,27 +65,27 @@ include_once ('../modelo/m_estado.php');
                   </div>
                   <hr>
                     <div class="form-group row">
-                        <div class="col-xs-2">
+                        <div class="col-xs-12 col-md-2">
                             <label for="ci">Cedula:</label>
                             <input class="form-control input-sm" id="ci" name="ci" type="text" placeholder="00000000">
                         </div>
-                        <div class="col-xs-2">
+                        <div class="col-xs-12 col-md-2">
                             <label for="pn">Nombre 1:</label>
                             <input class="form-control input-sm" id="pn" name="pn" type="text" placeholder="Primer Nombre">
                         </div>
-                        <div class="col-xs-2">
+                        <div class="col-xs-12 col-md-2">
                             <label for="sn">Nombre 2:</label>
                             <input class="form-control input-sm" id="sn" name="sn" type="text" placeholder="Segundo nombre">
                         </div>
-                        <div class="col-xs-2">
+                        <div class="col-xs-12 col-md-2">
                             <label for="pa">Apellido 1:</label>
                             <input class="form-control input-sm" id="pa" name="pa" type="text" placeholder="Primer apellido">
                         </div>
-                        <div class="col-xs-2">
+                        <div class="col-xs-12 col-md-2">
                             <label for="sa">Apellido 2:</label>
                             <input class="form-control input-sm" id="sa" name="sa" type="text" placeholder="Segundo apellido">
                         </div>
-                        <div class="col-xs-2">
+                        <div class="col-xs-12 col-md-2">
                             <label for="sexo">Sexo:</label>
                             <select name="sexo" id="sexo" class="form-control input-sm">
                               <option value="">Seleccione</option>
@@ -96,15 +96,15 @@ include_once ('../modelo/m_estado.php');
                     </div>
                     <hr>
                     <div class="form-group row">
-                      <div class="col-xs-2">
+                      <div class="col-xs-12 col-md-2">
                         <label for="fn">Fecha de Nacimiento:</label>
                         <input class="form-control input-sm" id="fn" name="fn" type="date" onchange="Edad(this.value);">
                       </div>
-                      <div class="col-xs-1">
+                      <div class="col-xs-12 col-md-1">
                         <label for="edad">Edad:</label>
                         <input class="form-control input-sm" id="edad" name="edad" type="text" placeholder="00" readOnly maxlengh="2">
                       </div>
-                      <div class="col-xs-2">
+                      <div class="col-xs-12 col-md-2">
                             <label for="parentesco">Parentesco:</label>
                             <select name="parentesco" id="parentesco" class="form-control input-sm">
                                 <option value="">Seleccione</option>
@@ -119,7 +119,7 @@ include_once ('../modelo/m_estado.php');
                                 ?>
                             </select>
                         </div>
-                        <div class="col-xs-2">
+                        <div class="col-xs-12 col-md-2">
                             <label for="estado_civil">Estado civil:</label>
                             <select name="estado_civil" id="estado_civil" class="form-control input-sm">
                               <option value="">Seleccione</option>
@@ -136,19 +136,19 @@ include_once ('../modelo/m_estado.php');
                               <?php } ?>
                             </select>
                           </div>
-                          <div class="col-xs-2">
+                          <div class="col-xs-12 col-md-2">
                             <label for="tipo_ingreso">Tipo de Ingreso:</label>
                             <input class="form-control input-sm" id="tipo_ingreso" name="tipo_ingreso" type="text" placeholder="Ingreso" readOnly>
                         </div>
                     </div>
                     <hr>
                     <div class="form-group row">
-                        <div class="col-xs-2">
+                        <div class="col-xs-12 col-md-2">
                             <p style="margin-bottom: -0.1em;"><label for="maternidad">Maternidad:</label></p>
                             <label class="radio-inline"><input type="radio" id="maternidad" name="maternidad" value="SI">Si</label>
                             <label class="radio-inline"><input type="radio" id="maternidad" name="maternidad" value="NO">No</label>
                         </div>
-                        <div class="col-xs-2">
+                        <div class="col-xs-12 col-md-2">
                             <p style="margin-bottom: -0.1em;"><label for="hasta25">¿Hijo hasta 25?:</label></p>
                             <label class="radio-inline"><input type="radio" id="hasta25" name="hasta25" value="SI">Si</label>
                             <label class="radio-inline"><input type="radio" id="hasta25" name="hasta25" value="NO">No</label>
@@ -160,23 +160,23 @@ include_once ('../modelo/m_estado.php');
                     </div>
                     <hr>
                     <div class="form-group row">
-                        <div class="col-xs-2">
+                        <div class="col-xs-12 col-md-2">
                             <label for="monto_prima">Monto Prima:</label>
                             <input class="form-control input-sm" id="monto_prima" name="monto_prima" type="text" placeholder="0.000,00 Bs.S" readOnly>
                         </div>
-                        <div class="col-xs-2">
+                        <div class="col-xs-12 col-md-2">
                             <label for="mes_prima">Mes Prima:</label>
                             <input class="form-control input-sm" id="mes_prima" name="mes_prima" type="text" placeholder="00" readOnly>
                         </div>
-                        <div class="col-xs-2">
+                        <div class="col-xs-12 col-md-2">
                             <label for="monto">Monto:</label>
                             <input class="form-control input-sm" id="monto" name="monto" type="text" placeholder="0.000,00 Bs.S" readOnly>
                         </div>
-                        <div class="col-xs-2">
+                        <div class="col-xs-12 col-md-2">
                             <label for="monto_empresa">Monto Empresa:</label>
                             <input class="form-control input-sm" id="monto_empresa" name="monto_empresa" type="text" placeholder="0.000,00 Bs.S" readOnly>
                         </div>
-                        <div class="col-xs-2">
+                        <div class="col-xs-12 col-md-2">
                             <label for="monto_empleado">Monto Empleado:</label>
                             <input class="form-control input-sm" id="monto_empleado" name="monto_empleado" type="text" placeholder="0.000,00 Bs.S" readOnly>
                         </div>

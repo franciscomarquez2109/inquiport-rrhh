@@ -65,27 +65,27 @@ include_once ('../modelo/m_estado.php');
                       <div id="home" class="tab-pane fade in active">
                         <h3>Datos Personales</h3><hr>
                         <div class="form-group row">
-                          <div class="col-xs-2">
+                          <div class="col-xs-12 col-md-2">
                             <label for="ci">Cedula:</label>
                             <input class="form-control input-sm" id="ci" name="ci" type="text" placeholder="00000000">
                           </div>
-                          <div class="col-xs-2">
+                          <div class="col-xs-12 col-md-2">
                             <label for="pn">Primer nombre:</label>
                             <input class="form-control input-sm" id="pn" name="pn" type="text" placeholder="Nombre 1">
                           </div>
-                          <div class="col-xs-2">
+                          <div class="col-xs-12 col-md-2">
                             <label for="sn">Segundo nombre:</label>
                             <input class="form-control input-sm" id="sn" name="sn" type="text" placeholder="Nombre 2">
                           </div>
-                          <div class="col-xs-2">
+                          <div class="col-xs-12 col-md-2">
                             <label for="pa">Primer apellido:</label>
                             <input class="form-control input-sm" id="pa" name="pa" type="text" placeholder="Apellido 1">
                           </div>
-                          <div class="col-xs-2">
+                          <div class="col-xs-12 col-md-2">
                             <label for="sa">Segundo pellido:</label>
                             <input class="form-control input-sm" id="sa" name="sa" type="text" placeholder="Apellido 2">
                           </div>
-                          <div class="col-xs-2">
+                          <div class="col-xs-12 col-md-2">
                             <label for="sexo">Sexo:</label>
                             <select name="sexo" id="sexo" class="form-control input-sm">
                               <option value="">Seleccione</option>
@@ -96,7 +96,7 @@ include_once ('../modelo/m_estado.php');
                         </div>
 
                         <div class="form-group row">
-                          <div class="col-xs-2">
+                          <div class="col-xs-12 col-md-2">
                             <label for="estado_civil">Estado civil:</label>
                             <select name="estado_civil" id="estado_civil" class="form-control input-sm">
                               <option value="">Seleccione</option>
@@ -113,24 +113,24 @@ include_once ('../modelo/m_estado.php');
                               <?php } ?>
                             </select>
                           </div>
-                          <div class="col-xs-2">
+                          <div class="col-xs-12 col-md-2">
                             <label for="fn">Fecha de nacimiento:</label>
                             <input class="form-control input-sm" id="fn" name="fn" type="date"  onchange="Edad(this.value)">
                           </div>
                          
-                          <div class="col-xs-1">
+                          <div class="col-xs-12 col-md-1">
                             <label for="edad">Edad:</label>
                             <input class="form-control input-sm" id="edad" name="edad" type="text" placeholder="00" readOnly>
                           </div>
-                          <div class="col-xs-2">
+                          <div class="col-xs-12 col-md-2">
                             <label for="lugar_nac">Lugar de nacimiento:</label>
                             <input class="form-control input-sm" id="lugar_nac" name="lugar_nac" type="text" placeholder="Nombre del lugar">
                           </div>
-                          <div class="col-xs-2">
+                          <div class="col-xs-12 col-md-2">
                             <label for="nacionalidad">Nacionalidad:</label>
                             <input class="form-control input-sm" id="nacionalidad" name="nacionalidad" type="text" placeholder="Ejemplo: venezolano(a)">
                           </div>
-                          <div class="col-xs-3">
+                          <div class="col-xs-12 col-md-3">
                             <label for="correo">Correo:</label>
                             <input class="form-control input-sm" id="correo" name="correo" type="text" placeholder="nombre@correo.com">
                           </div>
@@ -138,7 +138,7 @@ include_once ('../modelo/m_estado.php');
                         </div>
                         <hr>
                         <div class="form-group row">
-                          <div class="col-xs-4">
+                          <div class="col-xs-12 col-md-4">
                             <p><label>Lateralidad:</label></p>
                             <label class="radio-inline"><input type="radio" id="lateral" name="lateral" value="DERECHO">Derecho</label>
                             <label class="radio-inline"><input type="radio" id="lateral" name="lateral" value="ZURDO">Zurdo</label>
@@ -148,45 +148,45 @@ include_once ('../modelo/m_estado.php');
                         <hr>
                         <div class="form-group row">
                           
-                          <div class="col-xs-3">
+                          <div class="col-xs-12 col-md-3">
                             <label for="telhabi">Teléf. Habitación:</label>
                             <input class="form-control input-sm" id="telhabi" name="telhabi" type="text" placeholder="0000000">
                           </div>
                           
-                          <div class="col-xs-3">
+                          <div class="col-xs-12 col-md-3">
                             <label for="telmovil">Teléf. Movil:</label>
                             <input class="form-control input-sm" id="telmovil" name="telmovil" type="text" placeholder="0000000">
                           </div>
                           
-                          <div class="col-xs-3">
+                          <div class="col-xs-12 col-md-3">
                             <label for="teladic">Teléf. Adicional:</label>
                             <input class="form-control input-sm" id="teladic" name="teladic" type="text" placeholder="0000000">
                           </div>
                         </div>
                         <hr>
                         <div class="form-group row">
-                          <div class="col-xs-2">
+                          <div class="col-xs-12 col-md-2">
                             <p style="margin-bottom: -0.1em;"><label for="licencia">Licencia de Conducir:</label></p>
                             <label class="radio-inline"><input type="radio" id="licencia" name="licencia" value="SI" onclick="fecha_expeOff(this.value)">Si</label>
                             <label class="radio-inline"><input type="radio" id="licencia" name="licencia" value="NO" onclick="fecha_expeOff(this.value)">No</label>
                             
                           </div>
-                          <div class="col-xs-2">
+                          <div class="col-xs-12 col-md-2">
                             <label for="fecha_expe">Fecha Expedición:</label>
                             <input class="form-control input-sm" id="fecha_expe" name="fecha_expe" type="date">
                           </div>
                         </div>
                         <hr>
                         <div class="form-group row">
-                          <div class="col-xs-1">
+                          <div class="col-xs-12 col-md-1">
                             <label for="pantalon">Pantalón:</label>
                             <input class="form-control input-sm" id="pantalon" name="pantalon" type="text" placeholder="tallas">
                           </div>
-                          <div class="col-xs-1">
+                          <div class="col-xs-12 col-md-1">
                             <label for="camisa">Camisa:</label>
                             <input class="form-control input-sm" id="camisa" name="camisa" type="text" placeholder="tallas">
                           </div>
-                          <div class="col-xs-1">
+                          <div class="col-xs-12 col-md-1">
                             <label for="zapato">Zapato:</label>
                             <input class="form-control input-sm" id="zapato" name="zapato" type="text" placeholder="tallas">
                           </div>
@@ -197,66 +197,66 @@ include_once ('../modelo/m_estado.php');
                       <div id="menu1" class="tab-pane fade">
                         <h3>Otros datos</h3>
                         <div class="form-group row">
-                          <div class="col-xs-4">
+                          <div class="col-xs-12 col-md-4">
                             <label for="conyuge">Nombre del Conyuge:</label>
                             <input class="form-control input-sm" id="conyuge" name="conyuge" type="text" placeholder="Ejemplo: Maria Perez">
                           </div>
-                          <div class="col-xs-3">
+                          <div class="col-xs-12 col-md-3">
                             <label for="nac_conyuge">Nacionalidad:</label>
                             <input class="form-control input-sm" id="nac_conyuge" name="nac_conyuge" type="text" placeholder="Ejemplo: Venezolana">
                           </div>
-                          <div class="col-xs-2">
+                          <div class="col-xs-12 col-md-2">
                             <label for="fecha_nac_conyuge">Fecha de nacimiento:</label>
                             <input class="form-control input-sm" id="fecha_nac_conyuge" name="fecha_nac_conyuge" type="date" placeholder="tallas">
                           </div>
-                          <div class="col-xs-3">
+                          <div class="col-xs-12 col-md-3">
                             <label for="ocupacion_conyuge">Ocupación:</label>
                             <input class="form-control input-sm" id="ocupacion_conyuge" name="ocupacion_conyuge" type="text" placeholder="Ejemplo: Docente">
                           </div>
                         </div>
                         <div class="form-group row">
-                          <div class="col-xs-4">
+                          <div class="col-xs-12 col-md-4">
                             <label for="padre">Nombre del Padre:</label>
                             <input class="form-control input-sm" id="padre" name="padre" type="text" placeholder="Ejemplo: Maria Perez">
                           </div>
-                          <div class="col-xs-3">
+                          <div class="col-xs-12 col-md-3">
                             <label for="nac_padre">Nacionalidad:</label>
                             <input class="form-control input-sm" id="nac_padre" name="nac_padre" type="text" placeholder="Ejemplo: Venezolana">
                           </div>
-                          <div class="col-xs-2">
+                          <div class="col-xs-12 col-md-2">
                             <label for="fecha_nac_padre">Fecha de nacimiento:</label>
                             <input class="form-control input-sm" id="fecha_nac_padre" name="fecha_nac_padre" type="date" placeholder="tallas">
                           </div>
-                          <div class="col-xs-3">
+                          <div class="col-xs-12 col-md-3">
                             <label for="ocupacion_padre">Ocupación:</label>
                             <input class="form-control input-sm" id="ocupacion_padre" name="ocupacion_padre" type="text" placeholder="Ejemplo: Docente">
                           </div>
                         </div>
                         <div class="form-group row">
-                          <div class="col-xs-4">
+                          <div class="col-xs-12 col-md-4">
                             <label for="madre">Nombre de la Madre:</label>
                             <input class="form-control input-sm" id="madre" name="madre" type="text" placeholder="Ejemplo: Maria Perez">
                           </div>
-                          <div class="col-xs-3">
+                          <div class="col-xs-12 col-md-3">
                             <label for="nac_madre">Nacionalidad:</label>
                             <input class="form-control input-sm" id="nac_madre" name="nac_madre" type="text" placeholder="Ejemplo: Venezolana">
                           </div>
-                          <div class="col-xs-2">
+                          <div class="col-xs-12 col-md-2">
                             <label for="fecha_nac_madre">Fecha de nacimiento:</label>
                             <input class="form-control input-sm" id="fecha_nac_madre" name="fecha_nac_madre" type="date" placeholder="tallas">
                           </div>
-                          <div class="col-xs-3">
+                          <div class="col-xs-12 col-md-3">
                             <label for="ocupacion_madre">Ocupación:</label>
                             <input class="form-control input-sm" id="ocupacion_madre" name="ocupacion_madre" type="text" placeholder="Ejemplo: Docente">
                           </div>
                         </div>
                         <hr>
                         <div class="form-group row">
-                          <div class="col-xs-4">
+                          <div class="col-xs-12 col-md-4">
                             <label for="aof_inquiport">Amigo o Familiar en Inquiport:</label>
                             <input class="form-control input-sm" id="aof_inquiport" name="aof_inquiport" type="text" placeholder="Nombre de la Persona">
                           </div>
-                          <div class="col-xs-3">
+                          <div class="col-xs-12 col-md-3">
                             <label for="aof_area_inquiport">Area de Trabajo:</label>
                             <input class="form-control input-sm" id="aof_area_inquiport" name="aof_area_inquiport" type="text" placeholder="Nombre del Area">
                           </div>
@@ -279,32 +279,32 @@ include_once ('../modelo/m_estado.php');
 
                         </div>
                         <div class="form-group row">
-                          <div class="col-xs-4">
+                          <div class="col-xs-12 col-md-4">
                             <p style="margin-bottom: -0.1em;"><label for="empleo_ant">¿Ha solicitado empleo anteriormente en Inquiport?:</label></p>
                             <label class="radio-inline"><input type="radio" id="empleo_ant" name="empleo_ant" value="SI" onclick="empleoOff(this.value)">Si</label>
                             <label class="radio-inline"><input type="radio" id="empleo_ant" name="empleo_ant" value="NO" onclick="empleoOff(this.value)">No</label>
                           </div>
-                          <div class="col-xs-2">
+                          <div class="col-xs-12 col-md-2">
                             <label for="empleo_ant_cuando">¿Cuando?:</label>
                             <input class="form-control input-sm" id="empleo_ant_cuando" name="empleo_ant_cuando" type="date">
                           </div>
-                          <div class="col-xs-2">
+                          <div class="col-xs-12 col-md-2">
                             <label for="empleo_ant_donde">¿Donde?:</label>
                             <input class="form-control input-sm" id="empleo_ant_donde" name="empleo_ant_donde" type="text" placeholder="Nombre del Lugar">
                           </div>
                         </div>
                         <hr>
                         <div class="form-group row">
-                          <div class="col-xs-2">
+                          <div class="col-xs-12 col-md-2">
                             <p style="margin-bottom: -0.1em;"><label for="idioma">¿Habla algun idioma?:</label></p>
                             <label class="radio-inline"><input type="radio" id="idioma" name="idioma" value="SI" onclick="idiomaOff(this.value)">Si</label>
                             <label class="radio-inline"><input type="radio" id="idioma" name="idioma" value="NO" onclick="idiomaOff(this.value)">No</label>
                           </div>
-                          <div class="col-xs-2">
+                          <div class="col-xs-12 col-md-2">
                             <label for="nom_idioma">Idioma:</label>
                             <input class="form-control input-sm" id="nom_idioma" name="nom_idioma" type="text" placeholder="Nombre del idioma">
                           </div>
-                          <div class="col-xs-2">
+                          <div class="col-xs-12 col-md-2">
                             <label for="habla_idioma">Habla:</label>
                             <select name="habla_idioma" id="habla_idioma" class="form-control input-sm">
                               <option value="">Seleccione</option>
@@ -313,7 +313,7 @@ include_once ('../modelo/m_estado.php');
                               <option value="AVANZADO">Avanzado</option>
                             </select>
                           </div>
-                          <div class="col-xs-2">
+                          <div class="col-xs-12 col-md-2">
                             <label for="escribe_idioma">Escribe:</label>
                             <select name="escribe_idioma" id="escribe_idioma" class="form-control input-sm">
                               <option value="">Seleccione</option>
@@ -361,7 +361,7 @@ include_once ('../modelo/m_estado.php');
                       <div id="menu2" class="tab-pane fade">
                         <h3>Direccion</h3>
                         <div class="form-group row">
-                          <div class="col-xs-3">
+                          <div class="col-xs-12 col-md-3">
                             <label for="estado">Estado:</label>
                             <select name="estado" id="estado" class="form-control input-sm">
                             <option value="">Seleccione Estado</option>
@@ -375,14 +375,14 @@ include_once ('../modelo/m_estado.php');
                             <?php }?>
                             </select>
                           </div>
-                          <div class="col-xs-3">
+                          <div class="col-xs-12 col-md-3">
                             <label for="municipio">Municipio:</label>
                             <select name="municipio" id="municipio" class="form-control input-sm">
                               <option value="">Esperando..</option>
                               
                             </select>
                           </div>
-                          <div class="col-xs-3">
+                          <div class="col-xs-12 col-md-3">
                             <label for="ciudad">Ciudad:</label>
                             <select name="ciudades" id="ciudad" class="form-control input-sm">
                               <option value="0">Esperando..</option>
@@ -392,27 +392,27 @@ include_once ('../modelo/m_estado.php');
                         </div>
 
                         <div class="form-group row">
-                          <div class="col-xs-3">
+                          <div class="col-xs-12 col-md-3">
                             <label for="urbanismo">Urbanismo:</label>
                             <input class="form-control input-sm" id="urbanismo" name="urbanismo" type="text" placeholder="Nombre">
                           </div>
-                          <div class="col-xs-1">
+                          <div class="col-xs-12 col-md-1">
                             <label for="av_calle">Av/Calle:</label>
                             <input class="form-control input-sm" id="av_calle" name="av_calle" type="text" placeholder="Numero">
                           </div>
-                          <div class="col-xs-2">
+                          <div class="col-xs-12 col-md-2">
                             <label for="tipo">Tipo de Vivienda:</label>
                             <input class="form-control input-sm" id="tipo" name="tipo" type="text" placeholder="Numero">
                           </div>
-                          <div class="col-xs-1">
+                          <div class="col-xs-12 col-md-1">
                             <label for="numero_vivienda">N°:</label>
                             <input class="form-control input-sm" id="numero_vivienda" name="numero_vivienda" type="text" placeholder="00">
                           </div>
-                          <div class="col-xs-2">
+                          <div class="col-xs-12 col-md-2">
                             <label for="planta">Planta:</label>
                             <input class="form-control input-sm" id="planta" name="planta" type="text" placeholder="Ejemplo: Alta/baja">
                           </div>
-                          <div class="col-xs-1">
+                          <div class="col-xs-12 col-md-1">
                             <label for="piso">Piso:</label>
                             <input class="form-control input-sm" id="piso" name="piso" type="text" placeholder="00">
                           </div>
@@ -506,7 +506,7 @@ include_once ('../modelo/m_estado.php');
                         <hr>
                         <div class="form-group row">
 
-                          <div class="col-xs-3">
+                          <div class="col-xs-12 col-md-3">
                             <p style="margin-bottom: -0.5em;"><label for="">Areas de Interés:</label></p>
                           <div class="checkbox">
                             <label><input type="checkbox" name="area_inte[]" id="area_inte[]" value="ADMINISTRACION Y FINANZAS">Administración y Finanzas</label>
@@ -524,7 +524,7 @@ include_once ('../modelo/m_estado.php');
                             <label><input type="checkbox" name="area_inte[]" id="area_inte[]" value="ALMACEN">Almacén</label>
                           </div>
                           </div>
-                          <div class="col-xs-3" style="margin-top: 1.4em;">
+                          <div class="col-xs-12 col-md-3" style="margin-top: 1.4em;">
                           <div class="checkbox">
                             <label><input type="checkbox" name="area_inte[]" id="area_inte[]" value="SEGURIDAD HIGIENE Y AMBIENTE">Seguridad Higiene y Ambiente</label>
                           </div>
@@ -545,7 +545,7 @@ include_once ('../modelo/m_estado.php');
                         <hr>
                         <div class="form-group row">
 
-                          <div class="col-xs-3">
+                          <div class="col-xs-12 col-md-3">
                             <p style="margin-bottom: -0.5em;"><label for="">Conocimiento Ofimatico:</label></p>
                           <div class="checkbox">
                             <label><input type="checkbox" name="area_ofim[]" id="area_ofim[]" value="WORD">Word</label>
@@ -566,15 +566,15 @@ include_once ('../modelo/m_estado.php');
                         </div>
 
                         <div class="form-group row">
-                          <div class="col-xs-3">
+                          <div class="col-xs-12 col-md-3">
                             <label for="sueldo_aspi">Sueldo al que Aspira:</label>
                             <input class="form-control input-sm" id="sueldo_aspi" name="sueldo_aspi" type="text" placeholder="0.000,00">
                           </div>
-                          <div class="col-xs-3">
+                          <div class="col-xs-12 col-md-3">
                             <label for="fecha_dispo">Fecha de Disponibilidad:</label>
                             <input class="form-control input-sm" id="fecha_dispo" name="fecha_dispo" type="date" >
                           </div>
-                          <div class="col-xs-3">
+                          <div class="col-xs-12 col-md-3">
                             <label for="limitacion_geo">Limitacion Geografica:</label>
                             <input class="form-control input-sm" id="limitacion_geo" name="limitacion_geo" type="text" placeholder="">
                           </div>
@@ -584,7 +584,7 @@ include_once ('../modelo/m_estado.php');
                       <div id="menu6" class="tab-pane fade">
                         <h3>Datos de Vehiculo</h3>
                         <div class="form-group row">
-                          <div class="col-xs-2">
+                          <div class="col-xs-12 col-md-2">
                             <p style="margin-bottom: -0.1em;"><label for="vehiculo">¿Posee Vehiculo?:</label></p>
                             <label class="radio-inline"><input type="radio" id="vehiculo" name="vehiculo" value="SI" onclick="vehiculoOff(this.value)">Si</label>
                             <label class="radio-inline"><input type="radio" id="vehiculo" name="vehiculo" value="NO" onclick="vehiculoOff(this.value)">No</label>
@@ -592,47 +592,47 @@ include_once ('../modelo/m_estado.php');
                         </div>
 
                         <div class="form-group row">
-                          <div class="col-xs-3">
+                          <div class="col-xs-12 col-md-3">
                             <label for="marca_vehiculo">Marca:</label>
                             <input class="form-control input-sm" id="marca_vehiculo" name="marca_vehiculo" type="text" placeholder="Ejemplo: Ford">
                           </div>
-                          <div class="col-xs-3">
+                          <div class="col-xs-12 col-md-3">
                             <label for="modelo_vehiculo">Modelo:</label>
                             <input class="form-control input-sm" id="modelo_vehiculo" name="modelo_vehiculo" type="text" placeholder="Ejemplo: Blazer">
                           </div>
-                          <div class="col-xs-3">
+                          <div class="col-xs-12 col-md-3">
                             <label for="version_vehiculo">Versión:</label>
                             <input class="form-control input-sm" id="version_vehiculo" name="version_vehiculo" type="text" placeholder="Nombre">
                           </div>
                         </div>
 
                         <div class="form-group row">
-                          <div class="col-xs-3">
+                          <div class="col-xs-12 col-md-3">
                             <p style="margin-bottom: -0.1em;"><label for="transmicion">Tipo de Transmisión:</label></p>
                             <label class="radio-inline"><input type="radio" id="transmicionauto" name="transmicion" value="AUTOMATICO">Automatico</label>
                             <label class="radio-inline"><input type="radio" id="transmicionsincro" name="transmicion" value="SINCRONICO">Sincronico</label>
                           </div>
-                          <div class="col-xs-1">
+                          <div class="col-xs-12 col-md-1">
                             <label for="cant_cilindros">Cilindros:</label>
                             <input class="form-control input-sm" id="cant_cilindros" name="cant_cilindros" type="text" placeholder="00">
                           </div>
                         </div>
 
                         <div class="form-group row">
-                          <div class="col-xs-3">
+                          <div class="col-xs-12 col-md-3">
                             <p style="margin-bottom: -0.1em;"><label for="titulo_registro">Titulo del Registro:</label></p>
                             <label class="radio-inline"><input type="radio" id="titulo_registrosi" name="titulo_registro" value="SI">Si</label>
                             <label class="radio-inline"><input type="radio" id="titulo_registrono" name="titulo_registro" value="NO">No</label>
                           </div>
-                          <div class="col-xs-1">
+                          <div class="col-xs-12 col-md-1">
                             <label for="ano_vehiculo">Año:</label>
                             <input class="form-control input-sm" id="ano_vehiculo" name="ano_vehiculo" type="text" placeholder="0000">
                           </div>
-                          <div class="col-xs-2">
+                          <div class="col-xs-12 col-md-2">
                             <label for="color_vehiculo">Color:</label>
                             <input class="form-control input-sm" id="color_vehiculo" name="color_vehiculo" type="text" placeholder="Ejemplo: Negro">
                           </div>
-                          <div class="col-xs-3">
+                          <div class="col-xs-12 col-md-3">
                             <label for="uso">Tipo de Vehiculo:</label>
                             <select name="uso" id="uso" class="form-control input-sm">
                               <option value="">Seleccione</option>
@@ -646,15 +646,15 @@ include_once ('../modelo/m_estado.php');
                         </div>
 
                         <div class="form-group row">
-                          <div class="col-xs-1">
+                          <div class="col-xs-12 col-md-1">
                             <label for="num_placa">Placa N°:</label>
                             <input class="form-control input-sm" id="num_placa" name="num_placa" type="text" placeholder="ADV-00V">
                           </div>
-                          <div class="col-xs-2">
+                          <div class="col-xs-12 col-md-2">
                             <label for="num_motor">Serial del Motor:</label>
                             <input class="form-control input-sm" id="num_motor" name="num_motor" type="text" placeholder="000000000000">
                           </div>
-                          <div class="col-xs-3">
+                          <div class="col-xs-12 col-md-3">
                             <label for="num_carroceria">Serial de Carroceria:</label>
                             <input class="form-control input-sm" id="num_carroceria" name="num_carroceria" type="text" placeholder="000000000000">
                           </div>
@@ -676,36 +676,36 @@ include_once ('../modelo/m_estado.php');
                             <div class="col-md-12">
                               <label for="">TRABAJO N°: 1</label>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-xs-12 col-md-4">
                               <label for="nom_empresa">Nombre Empresa:</label>
                               <input type="text" name="nom_empresa[]" placeholder="Nombre de la institución" class="form-control name_list input-sm" />
                             </div>
-                            <div class="col-xs-3">
+                            <div class="col-xs-12 col-md-3">
                               <label for="nom_empresa">Naturaleza del Trabajo:</label>
                               <input type="text" name="natu_trabajo[]" placeholder="Cargo" class="form-control name_list input-sm" />
                             </div>
-                            <div class="col-xs-2">
+                            <div class="col-xs-12 col-md-2">
                               <label for="nom_empresa">Desde:</label>
                               <input type="date" name="fecha_desde[]" class="form-control name_list input-sm" />
                             </div>
-                            <div class="col-xs-2">
+                            <div class="col-xs-12 col-md-2">
                               <label for="nom_empresa">Hasta:</label>
                               <input type="date" name="fecha_hasta[]" class="form-control name_list input-sm" />
                               <br>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-xs-12 col-md-3">
                               <label for="nom_empresa">Supervisor:</label>
                               <input type="text" name="supervisor_empresa[]" placeholder="Nombre" class="form-control name_list input-sm" />
                             </div>
-                            <div class="col-xs-2">
+                            <div class="col-xs-12 col-md-2">
                               <label for="nom_empresa">Sueldo Inicial:</label>
                               <input type="text" name="saldo_inicial[]" placeholder="00.000,000 BsS" class="form-control name_list input-sm" />
                             </div>
-                            <div class="col-xs-2">
+                            <div class="col-xs-12 col-md-2">
                               <label for="nom_empresa">Sueldo Final:</label>
                               <input type="text" name="saldo_final[]" placeholder="00.000,000 BsS" class="form-control name_list input-sm" />
                             </div>
-                            <div class="col-xs-4">
+                            <div class="col-xs-12 col-md-4">
                               <label for="nom_empresa">Razón de retiro:</label>
                               <input type="text" name="retiro_empresa[]" placeholder="Motivo" class="form-control name_list input-sm" />
                             </div>
@@ -1059,7 +1059,7 @@ include_once ('../modelo/m_estado.php');
                         <hr>
                         <div class="form-group">
                           <div class="row">
-                            <div class="col-xs-3">
+                            <div class="col-xs-12 col-md-3">
                               <label for="municipio">Tipo de Ingreso:</label>
                               <select name="tipo_ingreso" id="tipo_ingreso" class="form-control input-sm">
                                 <option value="">Seleccione</option>
