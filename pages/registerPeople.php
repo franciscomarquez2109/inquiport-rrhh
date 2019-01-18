@@ -66,27 +66,27 @@ include_once ('../modelo/m_estado.php');
                         <h3>Datos Personales</h3><hr>
                         <div class="form-group row">
                           <div class="col-xs-12 col-md-2">
-                            <label for="ci">Cedula:</label>
-                            <input class="form-control input-sm" id="ci" name="ci" type="text" placeholder="00000000">
+                            <label for="ci"><span style="color: red; font-size: 17px;">*</span> Cedula:</label>
+                            <input class="form-control input-sm" id="ci" name="ci" type="text" placeholder="00000000" onkeypress="return SoloNumeros(event);">
                           </div>
                           <div class="col-xs-12 col-md-2">
-                            <label for="pn">Primer nombre:</label>
-                            <input class="form-control input-sm" id="pn" name="pn" type="text" placeholder="Nombre 1">
+                            <label for="pn"><span style="color: red; font-size: 17px;">*</span> Primer nombre:</label>
+                            <input class="form-control input-sm" id="pn" name="pn" type="text" placeholder="Nombre 1" onkeypress="return SoloLetras(event);">
                           </div>
                           <div class="col-xs-12 col-md-2">
                             <label for="sn">Segundo nombre:</label>
-                            <input class="form-control input-sm" id="sn" name="sn" type="text" placeholder="Nombre 2">
+                            <input class="form-control input-sm" id="sn" name="sn" type="text" placeholder="Nombre 2" onkeypress="return SoloLetras(event);">
                           </div>
                           <div class="col-xs-12 col-md-2">
-                            <label for="pa">Primer apellido:</label>
-                            <input class="form-control input-sm" id="pa" name="pa" type="text" placeholder="Apellido 1">
+                            <label for="pa"><span style="color: red; font-size: 17px;">*</span> Primer apellido:</label>
+                            <input class="form-control input-sm" id="pa" name="pa" type="text" placeholder="Apellido 1" onkeypress="return SoloLetras(event);">
                           </div>
                           <div class="col-xs-12 col-md-2">
                             <label for="sa">Segundo pellido:</label>
-                            <input class="form-control input-sm" id="sa" name="sa" type="text" placeholder="Apellido 2">
+                            <input class="form-control input-sm" id="sa" name="sa" type="text" placeholder="Apellido 2" onkeypress="return SoloLetras(event);">
                           </div>
                           <div class="col-xs-12 col-md-2">
-                            <label for="sexo">Sexo:</label>
+                            <label for="sexo"><span style="color: red; font-size: 17px;">*</span> Sexo:</label>
                             <select name="sexo" id="sexo" class="form-control input-sm">
                               <option value="">Seleccione</option>
                               <option value="FEMENINO">FEMENINO</option>
@@ -97,7 +97,7 @@ include_once ('../modelo/m_estado.php');
 
                         <div class="form-group row">
                           <div class="col-xs-12 col-md-2">
-                            <label for="estado_civil">Estado civil:</label>
+                            <label for="estado_civil"><span style="color: red; font-size: 17px;">*</span> Estado civil:</label>
                             <select name="estado_civil" id="estado_civil" class="form-control input-sm">
                               <option value="">Seleccione</option>
                               <?php
@@ -114,24 +114,24 @@ include_once ('../modelo/m_estado.php');
                             </select>
                           </div>
                           <div class="col-xs-12 col-md-2">
-                            <label for="fn">Fecha de nacimiento:</label>
+                            <label for="fn"><span style="color: red; font-size: 17px;">*</span> Fecha de nacimiento:</label>
                             <input class="form-control input-sm" id="fn" name="fn" type="date"  onchange="Edad(this.value)">
                           </div>
                          
                           <div class="col-xs-12 col-md-1">
-                            <label for="edad">Edad:</label>
+                            <label for="edad"><span style="color: red; font-size: 17px;">*</span> Edad:</label>
                             <input class="form-control input-sm" id="edad" name="edad" type="text" placeholder="00" readOnly>
                           </div>
                           <div class="col-xs-12 col-md-2">
-                            <label for="lugar_nac">Lugar de nacimiento:</label>
-                            <input class="form-control input-sm" id="lugar_nac" name="lugar_nac" type="text" placeholder="Nombre del lugar">
+                            <label for="lugar_nac"><span style="color: red; font-size: 17px;">*</span> Lugar de nacimiento:</label>
+                            <input class="form-control input-sm" id="lugar_nac" name="lugar_nac" type="text" placeholder="Nombre del lugar" onkeypress="return SoloLetras(event);">
                           </div>
                           <div class="col-xs-12 col-md-2">
-                            <label for="nacionalidad">Nacionalidad:</label>
-                            <input class="form-control input-sm" id="nacionalidad" name="nacionalidad" type="text" placeholder="Ejemplo: venezolano(a)">
+                            <label for="nacionalidad"><span style="color: red; font-size: 17px;">*</span> Nacionalidad:</label>
+                            <input class="form-control input-sm" id="nacionalidad" name="nacionalidad" type="text" placeholder="Ejemplo: venezolano(a)" onkeypress="return SoloLetras(event);">
                           </div>
                           <div class="col-xs-12 col-md-3">
-                            <label for="correo">Correo:</label>
+                            <label for="correo"><span style="color: red; font-size: 17px;">*</span> Correo:</label>
                             <input class="form-control input-sm" id="correo" name="correo" type="text" placeholder="nombre@correo.com">
                           </div>
 
@@ -139,7 +139,7 @@ include_once ('../modelo/m_estado.php');
                         <hr>
                         <div class="form-group row">
                           <div class="col-xs-12 col-md-4">
-                            <p><label>Lateralidad:</label></p>
+                            <p><label><span style="color: red; font-size: 17px;">*</span> Lateralidad:</label></p>
                             <label class="radio-inline"><input type="radio" id="lateral" name="lateral" value="DERECHO">Derecho</label>
                             <label class="radio-inline"><input type="radio" id="lateral" name="lateral" value="ZURDO">Zurdo</label>
                             <label class="radio-inline"><input type="radio" id="lateral" name="lateral" value="AMBIDIESTRO">Ambidiestro</label>
@@ -149,24 +149,24 @@ include_once ('../modelo/m_estado.php');
                         <div class="form-group row">
                           
                           <div class="col-xs-12 col-md-3">
-                            <label for="telhabi">Teléf. Habitación:</label>
-                            <input class="form-control input-sm" id="telhabi" name="telhabi" type="text" placeholder="0000000">
+                            <label for="telhabi"><span style="color: red; font-size: 17px;">*</span> Teléf. Habitación:</label>
+                            <input class="form-control input-sm" id="telhabi" name="telhabi" type="text" placeholder="0000000" onkeypress="return SoloNumeros(event);">
                           </div>
                           
                           <div class="col-xs-12 col-md-3">
-                            <label for="telmovil">Teléf. Movil:</label>
-                            <input class="form-control input-sm" id="telmovil" name="telmovil" type="text" placeholder="0000000">
+                            <label for="telmovil"><span style="color: red; font-size: 17px;">*</span> Teléf. Movil:</label>
+                            <input class="form-control input-sm" id="telmovil" name="telmovil" type="text" placeholder="0000000" onkeypress="return SoloNumeros(event);">
                           </div>
                           
                           <div class="col-xs-12 col-md-3">
                             <label for="teladic">Teléf. Adicional:</label>
-                            <input class="form-control input-sm" id="teladic" name="teladic" type="text" placeholder="0000000">
+                            <input class="form-control input-sm" id="teladic" name="teladic" type="text" placeholder="0000000" onkeypress="return SoloNumeros(event);">
                           </div>
                         </div>
                         <hr>
                         <div class="form-group row">
                           <div class="col-xs-12 col-md-2">
-                            <p style="margin-bottom: -0.1em;"><label for="licencia">Licencia de Conducir:</label></p>
+                            <p style="margin-bottom: -0.1em;"><label for="licencia"><span style="color: red; font-size: 17px;">*</span> Licencia de Conducir:</label></p>
                             <label class="radio-inline"><input type="radio" id="licencia" name="licencia" value="SI" onclick="fecha_expeOff(this.value)">Si</label>
                             <label class="radio-inline"><input type="radio" id="licencia" name="licencia" value="NO" onclick="fecha_expeOff(this.value)">No</label>
                             
@@ -178,20 +178,22 @@ include_once ('../modelo/m_estado.php');
                         </div>
                         <hr>
                         <div class="form-group row">
-                          <div class="col-xs-12 col-md-1">
-                            <label for="pantalon">Pantalón:</label>
-                            <input class="form-control input-sm" id="pantalon" name="pantalon" type="text" placeholder="tallas">
+                          <div class="col-xs-12 col-md-2">
+                            <label for="pantalon"><span style="color: red; font-size: 17px;">*</span> Pantalón:</label>
+                            <input class="form-control input-sm" id="pantalon" name="pantalon" type="text" placeholder="tallas" onkeypress="return SoloNumeros(event);">
                           </div>
-                          <div class="col-xs-12 col-md-1">
-                            <label for="camisa">Camisa:</label>
-                            <input class="form-control input-sm" id="camisa" name="camisa" type="text" placeholder="tallas">
+                          <div class="col-xs-12 col-md-2">
+                            <label for="camisa"><span style="color: red; font-size: 17px;">*</span> Camisa:</label>
+                            <input class="form-control input-sm" id="camisa" name="camisa" type="text" placeholder="tallas" onkeypress="return SoloLetras(event);">
                           </div>
-                          <div class="col-xs-12 col-md-1">
-                            <label for="zapato">Zapato:</label>
-                            <input class="form-control input-sm" id="zapato" name="zapato" type="text" placeholder="tallas">
+                          <div class="col-xs-12 col-md-2">
+                            <label for="zapato"><span style="color: red; font-size: 17px;">*</span> Zapato:</label>
+                            <input class="form-control input-sm" id="zapato" name="zapato" type="text" placeholder="tallas" onkeypress="return SoloNumeros(event);">
                           </div>
                         </div>
-                  
+                        <div class="form-group">
+                            <strong>(<span style="color: red; font-size: 17px;">*</span>): Campos obligatorios</strong>
+                        </div>
                       </div>
                       <!-- pestaña otros datos-->
                       <div id="menu1" class="tab-pane fade">
@@ -199,11 +201,11 @@ include_once ('../modelo/m_estado.php');
                         <div class="form-group row">
                           <div class="col-xs-12 col-md-4">
                             <label for="conyuge">Nombre del Conyuge:</label>
-                            <input class="form-control input-sm" id="conyuge" name="conyuge" type="text" placeholder="Ejemplo: Maria Perez">
+                            <input class="form-control input-sm" id="conyuge" name="conyuge" type="text" placeholder="Ejemplo: Maria Perez" onkeypress="return SoloLetras(event);">
                           </div>
                           <div class="col-xs-12 col-md-3">
                             <label for="nac_conyuge">Nacionalidad:</label>
-                            <input class="form-control input-sm" id="nac_conyuge" name="nac_conyuge" type="text" placeholder="Ejemplo: Venezolana">
+                            <input class="form-control input-sm" id="nac_conyuge" name="nac_conyuge" type="text" placeholder="Ejemplo: Venezolana" onkeypress="return SoloLetras(event);">
                           </div>
                           <div class="col-xs-12 col-md-2">
                             <label for="fecha_nac_conyuge">Fecha de nacimiento:</label>
@@ -211,59 +213,59 @@ include_once ('../modelo/m_estado.php');
                           </div>
                           <div class="col-xs-12 col-md-3">
                             <label for="ocupacion_conyuge">Ocupación:</label>
-                            <input class="form-control input-sm" id="ocupacion_conyuge" name="ocupacion_conyuge" type="text" placeholder="Ejemplo: Docente">
+                            <input class="form-control input-sm" id="ocupacion_conyuge" name="ocupacion_conyuge" type="text" placeholder="Ejemplo: Docente" onkeypress="return SoloLetras(event);">
                           </div>
                         </div>
                         <div class="form-group row">
                           <div class="col-xs-12 col-md-4">
-                            <label for="padre">Nombre del Padre:</label>
-                            <input class="form-control input-sm" id="padre" name="padre" type="text" placeholder="Ejemplo: Maria Perez">
+                            <label for="padre"><span style="color: red; font-size: 17px;">*</span> Nombre del Padre:</label>
+                            <input class="form-control input-sm" id="padre" name="padre" type="text" placeholder="Ejemplo: Maria Perez" onkeypress="return SoloLetras(event);">
                           </div>
                           <div class="col-xs-12 col-md-3">
-                            <label for="nac_padre">Nacionalidad:</label>
-                            <input class="form-control input-sm" id="nac_padre" name="nac_padre" type="text" placeholder="Ejemplo: Venezolana">
+                            <label for="nac_padre"><span style="color: red; font-size: 17px;">*</span> Nacionalidad:</label>
+                            <input class="form-control input-sm" id="nac_padre" name="nac_padre" type="text" placeholder="Ejemplo: Venezolana" onkeypress="return SoloLetras(event);">
                           </div>
                           <div class="col-xs-12 col-md-2">
-                            <label for="fecha_nac_padre">Fecha de nacimiento:</label>
-                            <input class="form-control input-sm" id="fecha_nac_padre" name="fecha_nac_padre" type="date" placeholder="tallas">
+                            <label for="fecha_nac_padre"><span style="color: red; font-size: 17px;">*</span> Fecha de nacimiento:</label>
+                            <input class="form-control input-sm" id="fecha_nac_padre" name="fecha_nac_padre" type="date" placeholder="tallas" onkeypress="return SoloLetras(event);">
                           </div>
                           <div class="col-xs-12 col-md-3">
-                            <label for="ocupacion_padre">Ocupación:</label>
-                            <input class="form-control input-sm" id="ocupacion_padre" name="ocupacion_padre" type="text" placeholder="Ejemplo: Docente">
+                            <label for="ocupacion_padre"><span style="color: red; font-size: 17px;">*</span> Ocupación:</label>
+                            <input class="form-control input-sm" id="ocupacion_padre" name="ocupacion_padre" type="text" placeholder="Ejemplo: Docente" onkeypress="return SoloLetras(event);">
                           </div>
                         </div>
                         <div class="form-group row">
                           <div class="col-xs-12 col-md-4">
-                            <label for="madre">Nombre de la Madre:</label>
-                            <input class="form-control input-sm" id="madre" name="madre" type="text" placeholder="Ejemplo: Maria Perez">
+                            <label for="madre"><span style="color: red; font-size: 17px;">*</span> Nombre de la Madre:</label>
+                            <input class="form-control input-sm" id="madre" name="madre" type="text" placeholder="Ejemplo: Maria Perez" onkeypress="return SoloLetras(event);">
                           </div>
                           <div class="col-xs-12 col-md-3">
-                            <label for="nac_madre">Nacionalidad:</label>
-                            <input class="form-control input-sm" id="nac_madre" name="nac_madre" type="text" placeholder="Ejemplo: Venezolana">
+                            <label for="nac_madre"><span style="color: red; font-size: 17px;">*</span> Nacionalidad:</label>
+                            <input class="form-control input-sm" id="nac_madre" name="nac_madre" type="text" placeholder="Ejemplo: Venezolana" onkeypress="return SoloLetras(event);">
                           </div>
                           <div class="col-xs-12 col-md-2">
-                            <label for="fecha_nac_madre">Fecha de nacimiento:</label>
-                            <input class="form-control input-sm" id="fecha_nac_madre" name="fecha_nac_madre" type="date" placeholder="tallas">
+                            <label for="fecha_nac_madre"><span style="color: red; font-size: 17px;">*</span> Fecha de nacimiento:</label>
+                            <input class="form-control input-sm" id="fecha_nac_madre" name="fecha_nac_madre" type="date" placeholder="">
                           </div>
                           <div class="col-xs-12 col-md-3">
-                            <label for="ocupacion_madre">Ocupación:</label>
-                            <input class="form-control input-sm" id="ocupacion_madre" name="ocupacion_madre" type="text" placeholder="Ejemplo: Docente">
+                            <label for="ocupacion_madre"><span style="color: red; font-size: 17px;">*</span> Ocupación:</label>
+                            <input class="form-control input-sm" id="ocupacion_madre" name="ocupacion_madre" type="text" placeholder="Ejemplo: Docente" onkeypress="return SoloLetras(event);">
                           </div>
                         </div>
                         <hr>
                         <div class="form-group row">
                           <div class="col-xs-12 col-md-4">
                             <label for="aof_inquiport">Amigo o Familiar en Inquiport:</label>
-                            <input class="form-control input-sm" id="aof_inquiport" name="aof_inquiport" type="text" placeholder="Nombre de la Persona">
+                            <input class="form-control input-sm" id="aof_inquiport" name="aof_inquiport" type="text" placeholder="Nombre de la Persona" onkeypress="return SoloLetras(event);">
                           </div>
                           <div class="col-xs-12 col-md-3">
                             <label for="aof_area_inquiport">Area de Trabajo:</label>
-                            <input class="form-control input-sm" id="aof_area_inquiport" name="aof_area_inquiport" type="text" placeholder="Nombre del Area">
+                            <input class="form-control input-sm" id="aof_area_inquiport" name="aof_area_inquiport" type="text" placeholder="Nombre del Area" onkeypress="return SoloLetras(event);">
                           </div>
                         </div>
                         <hr>
                         <div class="form-group">
-                          <p style="margin-bottom: -0.5em;"><label for="">¿Como se entero del empleo?:</label></p>
+                          <p style="margin-bottom: -0.5em;"><label for=""><span style="color: red; font-size: 17px;">*</span> ¿Como se entero del empleo?:</label></p>
                           <div class="radio">
                             <label><input type="radio" name="conoc_empleo" value="FAMILIAR EN LA EMPRESA">Familiar en la Empresa</label>
                           </div>
@@ -280,7 +282,7 @@ include_once ('../modelo/m_estado.php');
                         </div>
                         <div class="form-group row">
                           <div class="col-xs-12 col-md-4">
-                            <p style="margin-bottom: -0.1em;"><label for="empleo_ant">¿Ha solicitado empleo anteriormente en Inquiport?:</label></p>
+                            <p style="margin-bottom: -0.1em;"><label for="empleo_ant"><span style="color: red; font-size: 17px;">*</span> ¿Ha solicitado empleo anteriormente en Inquiport?:</label></p>
                             <label class="radio-inline"><input type="radio" id="empleo_ant" name="empleo_ant" value="SI" onclick="empleoOff(this.value)">Si</label>
                             <label class="radio-inline"><input type="radio" id="empleo_ant" name="empleo_ant" value="NO" onclick="empleoOff(this.value)">No</label>
                           </div>
@@ -290,19 +292,19 @@ include_once ('../modelo/m_estado.php');
                           </div>
                           <div class="col-xs-12 col-md-2">
                             <label for="empleo_ant_donde">¿Donde?:</label>
-                            <input class="form-control input-sm" id="empleo_ant_donde" name="empleo_ant_donde" type="text" placeholder="Nombre del Lugar">
+                            <input class="form-control input-sm" id="empleo_ant_donde" name="empleo_ant_donde" type="text" placeholder="Nombre del Lugar" onkeypress="return SoloLetras(event);">
                           </div>
                         </div>
                         <hr>
                         <div class="form-group row">
                           <div class="col-xs-12 col-md-2">
-                            <p style="margin-bottom: -0.1em;"><label for="idioma">¿Habla algun idioma?:</label></p>
+                            <p style="margin-bottom: -0.1em;"><label for="idioma"><span style="color: red; font-size: 17px;">*</span> ¿Habla algun idioma?:</label></p>
                             <label class="radio-inline"><input type="radio" id="idioma" name="idioma" value="SI" onclick="idiomaOff(this.value)">Si</label>
                             <label class="radio-inline"><input type="radio" id="idioma" name="idioma" value="NO" onclick="idiomaOff(this.value)">No</label>
                           </div>
                           <div class="col-xs-12 col-md-2">
                             <label for="nom_idioma">Idioma:</label>
-                            <input class="form-control input-sm" id="nom_idioma" name="nom_idioma" type="text" placeholder="Nombre del idioma">
+                            <input class="form-control input-sm" id="nom_idioma" name="nom_idioma" type="text" placeholder="Nombre del idioma" onkeypress="return SoloLetras(event);">
                           </div>
                           <div class="col-xs-12 col-md-2">
                             <label for="habla_idioma">Habla:</label>
@@ -327,7 +329,7 @@ include_once ('../modelo/m_estado.php');
                         <div class="form-group">
                           <table class="table" id="tabla_dist_academicas">
                             <thead>
-                              <th>Distinciones académicas</th>
+                              <th><span style="color: red; font-size: 17px;">*</span> Distinciones académicas</th>
                             </thead>
                             <tr>
                               <td style="width: 30%;">
@@ -343,7 +345,7 @@ include_once ('../modelo/m_estado.php');
                         <div class="form-group">
                           <table class="table" id="tabla_part_sociales">
                             <thead>
-                              <th>Participaciones sociales, Artistas y/o Deportivas</th>
+                              <th><span style="color: red; font-size: 17px;">*</span> Participaciones sociales, Artistas y/o Deportivas</th>
                             </thead>
                             <tr>
                               <td style="width: 30%;">
@@ -355,14 +357,16 @@ include_once ('../modelo/m_estado.php');
                           </tr>
                         </table>
                         </div>
-                      
+                        <div class="form-group">
+                          <strong>(<span style="color: red; font-size: 17px;">*</span>): Campos obligatorios</strong>
+                        </div>
                       </div>
                       <!-- pestaña direccion-->
                       <div id="menu2" class="tab-pane fade">
                         <h3>Direccion</h3>
                         <div class="form-group row">
                           <div class="col-xs-12 col-md-3">
-                            <label for="estado">Estado:</label>
+                            <label for="estado"><span style="color: red; font-size: 17px;">*</span> Estado:</label>
                             <select name="estado" id="estado" class="form-control input-sm">
                             <option value="">Seleccione Estado</option>
                             <?php
@@ -376,14 +380,14 @@ include_once ('../modelo/m_estado.php');
                             </select>
                           </div>
                           <div class="col-xs-12 col-md-3">
-                            <label for="municipio">Municipio:</label>
+                            <label for="municipio"><span style="color: red; font-size: 17px;">*</span> Municipio:</label>
                             <select name="municipio" id="municipio" class="form-control input-sm">
                               <option value="">Esperando..</option>
                               
                             </select>
                           </div>
                           <div class="col-xs-12 col-md-3">
-                            <label for="ciudad">Ciudad:</label>
+                            <label for="ciudad"><span style="color: red; font-size: 17px;">*</span> Ciudad:</label>
                             <select name="ciudades" id="ciudad" class="form-control input-sm">
                               <option value="0">Esperando..</option>
                               
@@ -393,30 +397,33 @@ include_once ('../modelo/m_estado.php');
 
                         <div class="form-group row">
                           <div class="col-xs-12 col-md-3">
-                            <label for="urbanismo">Urbanismo:</label>
+                            <label for="urbanismo"><span style="color: red; font-size: 17px;">*</span> Urbanismo:</label>
                             <input class="form-control input-sm" id="urbanismo" name="urbanismo" type="text" placeholder="Nombre">
                           </div>
-                          <div class="col-xs-12 col-md-1">
-                            <label for="av_calle">Av/Calle:</label>
-                            <input class="form-control input-sm" id="av_calle" name="av_calle" type="text" placeholder="Numero">
+                          <div class="col-xs-12 col-md-2">
+                            <label for="av_calle"><span style="color: red; font-size: 17px;">*</span> Av/Calle:</label>
+                            <input class="form-control input-sm" id="av_calle" name="av_calle" type="text" placeholder="Numero" onkeypress="return SoloNumeros(event);">
                           </div>
                           <div class="col-xs-12 col-md-2">
-                            <label for="tipo">Tipo de Vivienda:</label>
-                            <input class="form-control input-sm" id="tipo" name="tipo" type="text" placeholder="Numero">
+                            <label for="tipo"><span style="color: red; font-size: 17px;">*</span> Tipo de Vivienda:</label>
+                            <input class="form-control input-sm" id="tipo" name="tipo" type="text" placeholder="Tipo" onkeypress="return SoloLetras(event);">
                           </div>
                           <div class="col-xs-12 col-md-1">
-                            <label for="numero_vivienda">N°:</label>
-                            <input class="form-control input-sm" id="numero_vivienda" name="numero_vivienda" type="text" placeholder="00">
+                            <label for="numero_vivienda"><span style="color: red; font-size: 17px;">*</span> N°:</label>
+                            <input class="form-control input-sm" id="numero_vivienda" name="numero_vivienda" type="text" placeholder="00" onkeypress="return SoloNumeros(event);">
                           </div>
                           <div class="col-xs-12 col-md-2">
                             <label for="planta">Planta:</label>
-                            <input class="form-control input-sm" id="planta" name="planta" type="text" placeholder="Ejemplo: Alta/baja">
+                            <input class="form-control input-sm" id="planta" name="planta" type="text" placeholder="Ejemplo: Alta/baja" onkeypress="return SoloNumeros(event);">
                           </div>
                           <div class="col-xs-12 col-md-1">
                             <label for="piso">Piso:</label>
-                            <input class="form-control input-sm" id="piso" name="piso" type="text" placeholder="00">
+                            <input class="form-control input-sm" id="piso" name="piso" type="text" placeholder="00" onkeypress="return SoloNumeros(event);">
                           </div>
                           
+                        </div>
+                        <div class="form-group">
+                            <strong>(<span style="color: red; font-size: 17px;">*</span>): Campos obligatorios</strong>
                         </div>
                       </div>
                       <!-- pestaña numero de hijos-->
@@ -425,15 +432,15 @@ include_once ('../modelo/m_estado.php');
                         <div class="form-group">
                           <table class="table" id="tabla_hijos">
                             <thead>
-                              <th>Nombres</th>
-                              <th>Sexo</th>
-                              <th>Nacimiento</th>
+                              <th><span style="color: red; font-size: 17px;">*</span> Nombres</th>
+                              <th><span style="color: red; font-size: 17px;">*</span> Sexo</th>
+                              <th><span style="color: red; font-size: 17px;">*</span> Nacimiento</th>
                               <th>Cedula</th>
                               <th>Ocupacion</th>
                             </thead>
                             <tr>
                               <td>
-                                <input type="text" name="name_hijo[]" id="name_hijo[]" placeholder="Ejemplo: Juan" class="form-control name_list input-sm" />
+                                <input type="text" name="name_hijo[]" id="name_hijo[]" placeholder="Ejemplo: Juan" class="form-control name_list input-sm" onkeypress="return SoloLetras(event);" />
                               </td>
                             <td>
                               <select name="sexo_hijo[]" id="sexo_hijo[]" class="form-control input-sm">
@@ -443,19 +450,22 @@ include_once ('../modelo/m_estado.php');
                               </select>
                             </td>
                             <td>
-                              <input type="text" name="lugar_nac_hijo[]" id="lugar_nac_hijo[]" placeholder="Nombre del lugar" class="form-control name_list input-sm" />
+                              <input type="text" name="lugar_nac_hijo[]" id="lugar_nac_hijo[]" placeholder="Nombre del lugar" class="form-control name_list input-sm" onkeypress="return SoloLetras(event);"/>
                             </td>
                             <td>
-                              <input type="text" name="ci_hijo[]" id="ci_hijo[]" placeholder="00000000" class="form-control name_list input-sm" />
+                              <input type="text" name="ci_hijo[]" id="ci_hijo[]" placeholder="00000000" class="form-control name_list input-sm" onkeypress="return SoloNumeros(event);"/>
                             </td>
                             <td>
-                              <input type="text" name="ocupacion_hijo[]" id="ocupacion_hijo[]" placeholder="Ejemplo: Estudiante" class="form-control name_list input-sm" />
+                              <input type="text" name="ocupacion_hijo[]" id="ocupacion_hijo[]" placeholder="Ejemplo: Estudiante" class="form-control name_list input-sm" onkeypress="return SoloLetras(event);"/>
                             </td>
                             <td>
                               <button type="button" name="add_hijos" id="add_hijos" class="btn btn-success btn-sm"><i class="fa fa-plus"></i></button>
                             </td>
                           </tr>
                         </table>
+                        </div>
+                        <div class="form-group">
+                            <strong>(<span style="color: red; font-size: 17px;">*</span>): Campos obligatorios</strong>
                         </div>
                       </div>
                       <!-- pestaña grado academico-->
@@ -464,11 +474,11 @@ include_once ('../modelo/m_estado.php');
                         <div class="form-group">
                           <table class="table" id="tabla_grado_inst">
                             <thead>
-                              <th>Nivel Educativo</th>
-                              <th>Institución</th>
-                              <th>Ciudad</th>
+                              <th><span style="color: red; font-size: 17px;">*</span> Nivel Educativo</th>
+                              <th><span style="color: red; font-size: 17px;">*</span> Institución</th>
+                              <th><span style="color: red; font-size: 17px;">*</span> Ciudad</th>
                               <th>Desde - Hasta</th>
-                              <th>Años culminados</th>
+                              <th><span style="color: red; font-size: 17px;">*</span> Años culminados</th>
                             </thead>
                             <tr>
                               <td>
@@ -482,22 +492,25 @@ include_once ('../modelo/m_estado.php');
                               </select>
                               </td>
                                 <td>
-                                  <input type="text" name="institucion[]" id="institucion" placeholder="Nombre de la institución" class="form-control name_list input-sm" />
+                                  <input type="text" name="institucion[]" id="institucion" placeholder="Nombre de la institución" class="form-control name_list input-sm" onkeypress="return SoloLetras(event);"/>
                                 </td>
                               <td>
-                                <input type="text" name="ciudad[]" id="ciudad" placeholder="Nombre" class="form-control name_list input-sm" />
+                                <input type="text" name="ciudad[]" id="ciudad" placeholder="Nombre" class="form-control name_list input-sm" onkeypress="return SoloLetras(event);"/>
                               </td>
                               <td>
                                 <input type="text" name="desde_hasta[]" id="desde_hasta" placeholder="0000 - 0000" class="form-control name_list input-sm" />
                               </td>
                               <td>
-                                <input type="text" name="anos_culminacion[]" id="anos_culminacion" placeholder="00" class="form-control name_list input-sm" />
+                                <input type="text" name="anos_culminacion[]" id="anos_culminacion" placeholder="00" class="form-control name_list input-sm" onkeypress="return SoloNumeros(event);"/>
                               </td>
                               <td>
                                 <button type="button" name="add_grado_inst" id="add_grado_inst" class="btn btn-success btn-sm"><i class="fa fa-plus"></i></button>
                               </td>
                           </tr>
                         </table>
+                        </div>
+                        <div class="form-group">
+                            <strong>(<span style="color: red; font-size: 17px;">*</span>): Campos obligatorios</strong>
                         </div>
                       </div>
                       <!-- pestaña areas de interes-->
@@ -507,7 +520,7 @@ include_once ('../modelo/m_estado.php');
                         <div class="form-group row">
 
                           <div class="col-xs-12 col-md-3">
-                            <p style="margin-bottom: -0.5em;"><label for="">Areas de Interés:</label></p>
+                            <p style="margin-bottom: -0.5em;"><label for=""><span style="color: red; font-size: 17px;">*</span> Areas de Interés:</label></p>
                           <div class="checkbox">
                             <label><input type="checkbox" name="area_inte[]" id="area_inte[]" value="ADMINISTRACION Y FINANZAS">Administración y Finanzas</label>
                           </div>
@@ -546,7 +559,7 @@ include_once ('../modelo/m_estado.php');
                         <div class="form-group row">
 
                           <div class="col-xs-12 col-md-3">
-                            <p style="margin-bottom: -0.5em;"><label for="">Conocimiento Ofimatico:</label></p>
+                            <p style="margin-bottom: -0.5em;"><label for=""><span style="color: red; font-size: 17px;">*</span> Conocimiento Ofimatico:</label></p>
                           <div class="checkbox">
                             <label><input type="checkbox" name="area_ofim[]" id="area_ofim[]" value="WORD">Word</label>
                           </div>
@@ -571,13 +584,16 @@ include_once ('../modelo/m_estado.php');
                             <input class="form-control input-sm" id="sueldo_aspi" name="sueldo_aspi" type="text" placeholder="0.000,00">
                           </div>
                           <div class="col-xs-12 col-md-3">
-                            <label for="fecha_dispo">Fecha de Disponibilidad:</label>
+                            <label for="fecha_dispo"><span style="color: red; font-size: 17px;">*</span> Fecha de Disponibilidad:</label>
                             <input class="form-control input-sm" id="fecha_dispo" name="fecha_dispo" type="date" >
                           </div>
                           <div class="col-xs-12 col-md-3">
-                            <label for="limitacion_geo">Limitacion Geografica:</label>
+                            <label for="limitacion_geo"><span style="color: red; font-size: 17px;">*</span> Limitacion Geografica:</label>
                             <input class="form-control input-sm" id="limitacion_geo" name="limitacion_geo" type="text" placeholder="">
                           </div>
+                        </div>
+                        <div class="form-group">
+                            <strong>(<span style="color: red; font-size: 17px;">*</span>): Campos obligatorios</strong>
                         </div>
                       </div>
                       <!-- pestaña vehiculos-->
@@ -585,7 +601,7 @@ include_once ('../modelo/m_estado.php');
                         <h3>Datos de Vehiculo</h3>
                         <div class="form-group row">
                           <div class="col-xs-12 col-md-2">
-                            <p style="margin-bottom: -0.1em;"><label for="vehiculo">¿Posee Vehiculo?:</label></p>
+                            <p style="margin-bottom: -0.1em;"><label for="vehiculo"><span style="color: red; font-size: 17px;">*</span> ¿Posee Vehiculo?:</label></p>
                             <label class="radio-inline"><input type="radio" id="vehiculo" name="vehiculo" value="SI" onclick="vehiculoOff(this.value)">Si</label>
                             <label class="radio-inline"><input type="radio" id="vehiculo" name="vehiculo" value="NO" onclick="vehiculoOff(this.value)">No</label>
                           </div>
@@ -594,11 +610,11 @@ include_once ('../modelo/m_estado.php');
                         <div class="form-group row">
                           <div class="col-xs-12 col-md-3">
                             <label for="marca_vehiculo">Marca:</label>
-                            <input class="form-control input-sm" id="marca_vehiculo" name="marca_vehiculo" type="text" placeholder="Ejemplo: Ford">
+                            <input class="form-control input-sm" id="marca_vehiculo" name="marca_vehiculo" type="text" placeholder="Ejemplo: Ford" onkeypress="return SoloLetras(event);">
                           </div>
                           <div class="col-xs-12 col-md-3">
                             <label for="modelo_vehiculo">Modelo:</label>
-                            <input class="form-control input-sm" id="modelo_vehiculo" name="modelo_vehiculo" type="text" placeholder="Ejemplo: Blazer">
+                            <input class="form-control input-sm" id="modelo_vehiculo" name="modelo_vehiculo" type="text" placeholder="Ejemplo: Blazer" onkeypress="return SoloLetras(event);">
                           </div>
                           <div class="col-xs-12 col-md-3">
                             <label for="version_vehiculo">Versión:</label>
@@ -614,7 +630,7 @@ include_once ('../modelo/m_estado.php');
                           </div>
                           <div class="col-xs-12 col-md-1">
                             <label for="cant_cilindros">Cilindros:</label>
-                            <input class="form-control input-sm" id="cant_cilindros" name="cant_cilindros" type="text" placeholder="00">
+                            <input class="form-control input-sm" id="cant_cilindros" name="cant_cilindros" type="text" placeholder="00" onkeypress="return SoloNumeros(event);">
                           </div>
                         </div>
 
@@ -626,11 +642,11 @@ include_once ('../modelo/m_estado.php');
                           </div>
                           <div class="col-xs-12 col-md-1">
                             <label for="ano_vehiculo">Año:</label>
-                            <input class="form-control input-sm" id="ano_vehiculo" name="ano_vehiculo" type="text" placeholder="0000">
+                            <input class="form-control input-sm" id="ano_vehiculo" name="ano_vehiculo" type="text" placeholder="0000" onkeypress="return SoloNumeros(event);">
                           </div>
                           <div class="col-xs-12 col-md-2">
                             <label for="color_vehiculo">Color:</label>
-                            <input class="form-control input-sm" id="color_vehiculo" name="color_vehiculo" type="text" placeholder="Ejemplo: Negro">
+                            <input class="form-control input-sm" id="color_vehiculo" name="color_vehiculo" type="text" placeholder="Ejemplo: Negro" onkeypress="return SoloLetras(event);">
                           </div>
                           <div class="col-xs-12 col-md-3">
                             <label for="uso">Tipo de Vehiculo:</label>
@@ -652,12 +668,15 @@ include_once ('../modelo/m_estado.php');
                           </div>
                           <div class="col-xs-12 col-md-2">
                             <label for="num_motor">Serial del Motor:</label>
-                            <input class="form-control input-sm" id="num_motor" name="num_motor" type="text" placeholder="000000000000">
+                            <input class="form-control input-sm" id="num_motor" name="num_motor" type="text" placeholder="000000000000" >
                           </div>
                           <div class="col-xs-12 col-md-3">
                             <label for="num_carroceria">Serial de Carroceria:</label>
                             <input class="form-control input-sm" id="num_carroceria" name="num_carroceria" type="text" placeholder="000000000000">
                           </div>
+                        </div>
+                        <div class="form-group">
+                            <strong>(<span style="color: red; font-size: 17px;">*</span>): Campos obligatorios</strong>
                         </div>
                       </div>
                       <!-- pestaña condicion fisica-->
@@ -677,42 +696,45 @@ include_once ('../modelo/m_estado.php');
                               <label for="">TRABAJO N°: 1</label>
                             </div>
                             <div class="col-xs-12 col-md-4">
-                              <label for="nom_empresa">Nombre Empresa:</label>
-                              <input type="text" name="nom_empresa[]" placeholder="Nombre de la institución" class="form-control name_list input-sm" />
+                              <label for="nom_empresa"><span style="color: red; font-size: 17px;">*</span> Nombre Empresa:</label>
+                              <input type="text" name="nom_empresa[]" placeholder="Nombre de la institución" class="form-control name_list input-sm" onkeypress="return SoloLetras(event);"/>
                             </div>
                             <div class="col-xs-12 col-md-3">
-                              <label for="nom_empresa">Naturaleza del Trabajo:</label>
-                              <input type="text" name="natu_trabajo[]" placeholder="Cargo" class="form-control name_list input-sm" />
+                              <label for="nom_empresa"><span style="color: red; font-size: 17px;">*</span> Naturaleza del Trabajo:</label>
+                              <input type="text" name="natu_trabajo[]" placeholder="Cargo" class="form-control name_list input-sm" onkeypress="return SoloLetras(event);"/>
                             </div>
                             <div class="col-xs-12 col-md-2">
-                              <label for="nom_empresa">Desde:</label>
+                              <label for="nom_empresa"><span style="color: red; font-size: 17px;">*</span> Desde:</label>
                               <input type="date" name="fecha_desde[]" class="form-control name_list input-sm" />
                             </div>
                             <div class="col-xs-12 col-md-2">
-                              <label for="nom_empresa">Hasta:</label>
+                              <label for="nom_empresa"><span style="color: red; font-size: 17px;">*</span> Hasta:</label>
                               <input type="date" name="fecha_hasta[]" class="form-control name_list input-sm" />
                               <br>
                             </div>
                             <div class="col-xs-12 col-md-3">
                               <label for="nom_empresa">Supervisor:</label>
-                              <input type="text" name="supervisor_empresa[]" placeholder="Nombre" class="form-control name_list input-sm" />
+                              <input type="text" name="supervisor_empresa[]" placeholder="Nombre" class="form-control name_list input-sm" onkeypress="return SoloLetras(event);"/>
                             </div>
                             <div class="col-xs-12 col-md-2">
-                              <label for="nom_empresa">Sueldo Inicial:</label>
+                              <label for="nom_empresa"><span style="color: red; font-size: 17px;">*</span> Sueldo Inicial:</label>
                               <input type="text" name="saldo_inicial[]" placeholder="00.000,000 BsS" class="form-control name_list input-sm" />
                             </div>
                             <div class="col-xs-12 col-md-2">
-                              <label for="nom_empresa">Sueldo Final:</label>
+                              <label for="nom_empresa"><span style="color: red; font-size: 17px;">*</span> Sueldo Final:</label>
                               <input type="text" name="saldo_final[]" placeholder="00.000,000 BsS" class="form-control name_list input-sm" />
                             </div>
                             <div class="col-xs-12 col-md-4">
-                              <label for="nom_empresa">Razón de retiro:</label>
-                              <input type="text" name="retiro_empresa[]" placeholder="Motivo" class="form-control name_list input-sm" />
+                              <label for="nom_empresa"><span style="color: red; font-size: 17px;">*</span> Razón de retiro:</label>
+                              <input type="text" name="retiro_empresa[]" placeholder="Motivo" class="form-control name_list input-sm" onkeypress="return SoloLetras(event);"/>
                             </div>
                             <div class="col-md-12">
                               <hr>
                             </div>
                           </div>                          
+                        </div>
+                        <div class="form-group">
+                            <strong>(<span style="color: red; font-size: 17px;">*</span>): Campos obligatorios</strong>
                         </div>
                       </div>
                       <!-- pestaña referencia personales-->
@@ -721,23 +743,23 @@ include_once ('../modelo/m_estado.php');
                         <div class="form-group">
                           <table class="table" id="tabla_referencias">
                             <thead>
-                              <th>Nombre y Apellido</th>
-                              <th>Telefono</th>
-                              <th>Ocupación</th>
-                              <th>Compañia</th>
+                              <th><span style="color: red; font-size: 17px;">*</span> Nombre y Apellido</th>
+                              <th><span style="color: red; font-size: 17px;">*</span> Telefono</th>
+                              <th><span style="color: red; font-size: 17px;">*</span> Ocupación</th>
+                              <th><span style="color: red; font-size: 17px;">*</span> Compañia</th>
                             </thead>
                             <tr>
                               <td>
-                                <input type="text" name="nom_ape_refe[]" id="nom_ape_refe[]" placeholder="nombre y apellido" class="form-control name_list input-sm" />
+                                <input type="text" name="nom_ape_refe[]" id="nom_ape_refe[]" placeholder="nombre y apellido" class="form-control name_list input-sm" onkeypress="return SoloLetras(event);"/>
                               </td>
                               <td>
-                                <input type="text" name="telefono_refe[]" id="telefono_refe[]" placeholder="0000000" class="form-control name_list input-sm" />
+                                <input type="text" name="telefono_refe[]" id="telefono_refe[]" placeholder="0000000" class="form-control name_list input-sm" onkeypress="return SoloNumeros(event);"/>
                               </td>
                             <td>
-                              <input type="text" name="ocupacion_refe[]" id="ocupacion_refe[]" placeholder="Ejemplo: Ingeniero" class="form-control name_list input-sm" />
+                              <input type="text" name="ocupacion_refe[]" id="ocupacion_refe[]" placeholder="Ejemplo: Ingeniero" class="form-control name_list input-sm" onkeypress="return SoloLetras(event);"/>
                             </td>
                             <td>
-                              <input type="text" name="compania_refe[]" id="compañia_refe[]" placeholder="Nombre de la Compañia" class="form-control name_list input-sm" />
+                              <input type="text" name="compania_refe[]" id="compañia_refe[]" placeholder="Nombre de la Compañia" class="form-control name_list input-sm" onkeypress="return SoloLetras(event);"/>
                             </td>
                             
                             <td>
@@ -748,6 +770,9 @@ include_once ('../modelo/m_estado.php');
                         <div class="form-group">
                           <button type="button" name="enviarPerson" id="enviarPerson" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> Enviar</button>
                         </div>
+                        </div>
+                        <div class="form-group">
+                            <strong>(<span style="color: red; font-size: 17px;">*</span>): Campos obligatorios</strong>
                         </div>
                       </div>
                        <!-- pestaña consignacion de datos-->
@@ -1060,7 +1085,7 @@ include_once ('../modelo/m_estado.php');
                         <div class="form-group">
                           <div class="row">
                             <div class="col-xs-12 col-md-3">
-                              <label for="municipio">Tipo de Ingreso:</label>
+                              <label for="municipio"><span style="color: red; font-size: 17px;">*</span> Tipo de Ingreso:</label>
                               <select name="tipo_ingreso" id="tipo_ingreso" class="form-control input-sm">
                                 <option value="">Seleccione</option>
                                 <?php
@@ -1082,6 +1107,9 @@ include_once ('../modelo/m_estado.php');
                           <hr>
                           <button type="button" name="enviarP" id="enviarP" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> Registrar</button>
                           </div>
+                        </div>
+                        <div class="form-group">
+                            <strong>(<span style="color: red; font-size: 17px;">*</span>): Campos obligatorios</strong>
                         </div>
                       </div>
 
@@ -1121,6 +1149,7 @@ include_once ('../modelo/m_estado.php');
   <script src="../assets/js/calcularEdad.js"></script>
   <script src="../assets/js/disabledOptions.js"></script>
   <script src="../assets/js/municipio.js"></script>
+  <script src="../assets/js/validaciones.js"></script>
 
 
 </body>

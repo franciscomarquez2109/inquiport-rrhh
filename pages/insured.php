@@ -48,7 +48,7 @@ include_once ('../modelo/m_estado.php');
                   <div class="form-group row">
                     <div class="col-xs-12 col-md-2">
                         <div class="input-group">
-                          <input type="text" class="form-control" id="cedula_persona" name="cedula_persona" placeholder="Buscar cedula" autofocus>
+                          <input type="text" class="form-control" id="cedula_persona" name="cedula_persona" placeholder="Buscar cedula" autofocus >
                           <div class="input-group-btn">
                             <button class="btn btn-default" type="button" id="buscar_persona">
                             <i class="fa fa-search"></i>
@@ -181,6 +181,7 @@ include_once ('../modelo/m_estado.php');
   <script src="../assets/js/searchPeople.js"></script>
   <script src="../assets/js/calculatorTable.js"></script>
   <script src="../assets/js/newInsured.js"></script>
+  <script src="../assets/js/validaciones.js"></script>
 
 
  

@@ -36,7 +36,8 @@ if ($_SESSION['user']=="") {
             <div class="col-md-12">
               <div class="box">
                 <div class="box-header with-border">
-                  <h3 class="box-title">Ver Trabajadores</h3>
+                  <h3 class="box-title">Ver Trabajadores |</h3>
+                  <a  style="margin-left: 0.5em;" type="button" href="../pages/registerPeople.php" name="r_people" id="r_people" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
                   <div class="box-tools pull-right">
                     <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
                   </div>
@@ -72,8 +73,8 @@ if ($_SESSION['user']=="") {
                                 Acciones <i class="fa fa-angle-down"></i>
                                 </button>
                                 <ul class="dropdown-menu">
-                                <li><a href="../pages/verPeople.php"><i class="fa fa-eye"></i> Ver</a></li>
-                                <li><a href="../pages/editPeople.php"><i class="fa fa-edit"></i> Editar</a></li>
+                                <li><a href="#"><i class="fa fa-eye"></i> Ver</a></li>
+                                <li><a href="#"><i class="fa fa-edit"></i> Editar</a></li>
                                 <li><a href="#"><i class="fa fa-times"></i> Desactivar</a></li>
                                 </ul>
                               </div></td></tr>';

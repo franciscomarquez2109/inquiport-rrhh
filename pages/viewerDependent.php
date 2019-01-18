@@ -36,7 +36,8 @@ if ($_SESSION['user']=="") {
             <div class="col-md-12">
               <div class="box">
                 <div class="box-header with-border">
-                  <h3 class="box-title">Dependientes</h3>
+                  <h3 class="box-title">Dependientes |</h3>
+                  <a  style="margin-left: 0.5em;" type="button" href="../pages/dependent.php" name="r_dependiente" id="r_dependiente" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
                   <div class="box-tools pull-right">
                     <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
                   </div>

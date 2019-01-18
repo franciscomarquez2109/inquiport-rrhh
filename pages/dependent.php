@@ -67,23 +67,23 @@ include_once ('../modelo/m_estado.php');
                     <div class="form-group row">
                         <div class="col-xs-12 col-md-2">
                             <label for="ci">Cedula:</label>
-                            <input class="form-control input-sm" id="ci" name="ci" type="text" placeholder="00000000">
+                            <input class="form-control input-sm" id="ci" name="ci" type="text" placeholder="00000000" onkeypress="return SoloNumeros(event);">
                         </div>
                         <div class="col-xs-12 col-md-2">
                             <label for="pn">Nombre 1:</label>
-                            <input class="form-control input-sm" id="pn" name="pn" type="text" placeholder="Primer Nombre">
+                            <input class="form-control input-sm" id="pn" name="pn" type="text" placeholder="Primer Nombre" onkeypress="return SoloLetras(event);">
                         </div>
                         <div class="col-xs-12 col-md-2">
                             <label for="sn">Nombre 2:</label>
-                            <input class="form-control input-sm" id="sn" name="sn" type="text" placeholder="Segundo nombre">
+                            <input class="form-control input-sm" id="sn" name="sn" type="text" placeholder="Segundo nombre" onkeypress="return SoloLetras(event);">
                         </div>
                         <div class="col-xs-12 col-md-2">
                             <label for="pa">Apellido 1:</label>
-                            <input class="form-control input-sm" id="pa" name="pa" type="text" placeholder="Primer apellido">
+                            <input class="form-control input-sm" id="pa" name="pa" type="text" placeholder="Primer apellido" onkeypress="return SoloLetras(event);">
                         </div>
                         <div class="col-xs-12 col-md-2">
                             <label for="sa">Apellido 2:</label>
-                            <input class="form-control input-sm" id="sa" name="sa" type="text" placeholder="Segundo apellido">
+                            <input class="form-control input-sm" id="sa" name="sa" type="text" placeholder="Segundo apellido" onkeypress="return SoloLetras(event);">
                         </div>
                         <div class="col-xs-12 col-md-2">
                             <label for="sexo">Sexo:</label>
@@ -213,6 +213,7 @@ include_once ('../modelo/m_estado.php');
   <script src="../assets/js/calculatorTable.js"></script>
   <script src="../assets/js/searchInsured.js"></script>
   <script src="../assets/js/newDependent.js"></script>
+  <script src="../assets/js/validaciones.js"></script>
  
 
 
