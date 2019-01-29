@@ -143,8 +143,8 @@ if ($ci == $row['cedula']) {
         }
         require '../config/config_db.php';
         $connect = mysqli_connect(HOST,USER,PASSWORD,DATABASE);
-        $count_dist = count($dist); // cantidad de registros en distinciones acedemicas
-        if($count_dist > -1){
+        $count_nivel_educ = count($nivel_educ); // cantidad de registros en distinciones acedemicas
+        if($count_nivel_educ > -1){
             //ciclo para registro de distinciones academicas
 	        for($i=0; $i<$count_dist; $i++){
                 $dist[$i] = strtoupper($dist[$i]);

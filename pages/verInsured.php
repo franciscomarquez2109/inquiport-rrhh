@@ -53,34 +53,34 @@ if ($_SESSION['user']=="") {
                             <label for="ci">Nombres y Apellidos:</label>
                             <input class="form-control input-sm" id="nombres" name="nombres" type="text" placeholder="Nombres y Apellidos" readOnly value="<?php echo $_GET['nombres'];?>">
                         </div>
-                        <div class="col-xs-3">
+                        <div class="col-xs-12 col-md-3">
                             <label for="fn">Fecha de Nacimiento:</label>
                             <input class="form-control input-sm" id="fn" name="fn" type="date" placeholder="00/00/0000" readOnly value="<?php echo $_GET['fn'];?>">
                         </div>
-                        <div class="col-xs-1">
+                        <div class="col-xs-12 col-md-1">
                             <label for="edad">Edad:</label>
                             <input class="form-control input-sm" id="edad" name="edad" type="text" placeholder="00" readOnly value="<?php echo $_GET['edad'];?>">
                         </div>
-                        <div class="col-xs-2">
+                        <div class="col-xs-12 col-md-2">
                             <label for="sexo">sexo:</label>
                             <input class="form-control input-sm" id="sexo" name="sexo" type="text" placeholder="Masculino/fenemino" readOnly value="<?php echo $_GET['sexo'];?>">
                         </div>
                     </div>
                     <hr>
                     <div class="form-group row">
-                        <div class="col-xs-2">
+                        <div class="col-xs-12 col-md-2">
                             <label for="tipo_nomina">Tipo Nomina:</label>
                             <input class="form-control input-sm" id="tipo_nomina" name="tipo_nomina" type="text" placeholder="Nomina" readOnly value="<?php echo $_GET['tn'];?>">
                         </div>
-                        <div class="col-xs-2">
+                        <div class="col-xs-12 col-md-2">
                             <label for="condicion">Tipo Ingreso:</label>
                             <input class="form-control input-sm" id="condicion" name="condicion" type="text" placeholder="Condicion" readOnly value="<?php echo $_GET['con'];?>">
                         </div>
-                        <div class="col-xs-4">
+                        <div class="col-xs-12 col-md-4">
                             <label for="departamento">Departamento:</label>
                             <input class="form-control input-sm" id="departamento" name="departamento" type="text" placeholder="Departamento" readOnly value="<?php echo $_GET['depar'];?>">
                         </div>
-                        <div class="col-xs-1">
+                        <div class="col-xs-12 col-md-2">
                             <label for="maternidad">Maternidad:</label>
                             <input class="form-control input-sm" id="maternidad" name="maternidad" type="text" placeholder="Departamento" readOnly value="<?php echo $_GET['mater'];?>">
                         </div>
@@ -88,23 +88,23 @@ if ($_SESSION['user']=="") {
                     </div>
                    <hr>
                     <div class="form-group row">
-                        <div class="col-xs-2">
+                        <div class="col-xs-12 col-md-2">
                             <label for="monto_prima">Monto Prima:</label>
                             <input class="form-control input-sm" id="monto_prima" name="monto_prima" type="text" placeholder="0.000,00 Bs.S" readOnly value="<?php echo $_GET['mp'];?>">
                         </div>
-                        <div class="col-xs-2">
+                        <div class="col-xs-12 col-md-2">
                             <label for="mes_prima">Mes Prima:</label>
                             <input class="form-control input-sm" id="mes_prima" name="mes_prima" type="text" placeholder="00" readOnly value="<?php echo $_GET['mes'];?>">
                         </div>
-                        <div class="col-xs-2">
+                        <div class="col-xs-12 col-md-2">
                             <label for="monto">Monto:</label>
                             <input class="form-control input-sm" id="monto" name="monto" type="text" placeholder="0.000,00 Bs.S" readOnly value="<?php echo $_GET['monto'];?>">
                         </div>
-                        <div class="col-xs-2">
+                        <div class="col-xs-12 col-md-2">
                             <label for="monto_empresa">Monto Empresa:</label>
                             <input class="form-control input-sm" id="monto_empresa" name="monto_empresa" type="text" placeholder="0.000,00 Bs.S" readOnly value="<?php echo $_GET['me'];?>">
                         </div>
-                        <div class="col-xs-2">
+                        <div class="col-xs-12 col-md-2">
                             <label for="monto_empleado">Monto Empleado:</label>
                             <input class="form-control input-sm" id="monto_empleado" name="monto_empleado" type="text" placeholder="0.000,00 Bs.S" readOnly value="<?php echo $_GET['mempleado'];?>">
                         </div>

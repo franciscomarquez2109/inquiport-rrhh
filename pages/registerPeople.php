@@ -127,8 +127,12 @@ include_once ('../modelo/m_estado.php');
                             <input class="form-control input-sm" id="lugar_nac" name="lugar_nac" type="text" placeholder="Nombre del lugar" onkeypress="return SoloLetras(event);">
                           </div>
                           <div class="col-xs-12 col-md-2">
-                            <label for="nacionalidad"><span style="color: red; font-size: 17px;">*</span> Nacionalidad:</label>
-                            <input class="form-control input-sm" id="nacionalidad" name="nacionalidad" type="text" placeholder="Ejemplo: venezolano(a)" onkeypress="return SoloLetras(event);">
+                            <label for="sexo"><span style="color: red; font-size: 17px;">*</span> Nacionalidad:</label>
+                            <select name="nacionalidad" id="nacionalidad" class="form-control input-sm">
+                              <option value="">Seleccione</option>
+                              <option value="VENEZOLANA">Venezolana</option>
+                              <option value="EXTRANJERA">Extranjero</option>
+                            </select>
                           </div>
                           <div class="col-xs-12 col-md-3">
                             <label for="correo"><span style="color: red; font-size: 17px;">*</span> Correo:</label>
@@ -204,8 +208,12 @@ include_once ('../modelo/m_estado.php');
                             <input class="form-control input-sm" id="conyuge" name="conyuge" type="text" placeholder="Ejemplo: Maria Perez" onkeypress="return SoloLetras(event);">
                           </div>
                           <div class="col-xs-12 col-md-3">
-                            <label for="nac_conyuge">Nacionalidad:</label>
-                            <input class="form-control input-sm" id="nac_conyuge" name="nac_conyuge" type="text" placeholder="Ejemplo: Venezolana" onkeypress="return SoloLetras(event);">
+                            <label for="sexo"> Nacionalidad:</label>
+                            <select name="nac_conyuge" id="nac_conyuge" class="form-control input-sm">
+                              <option value="">Seleccione</option>
+                              <option value="VENEZOLANA">Venezolana</option>
+                              <option value="EXTRANJERA">Extranjero</option>
+                            </select>
                           </div>
                           <div class="col-xs-12 col-md-2">
                             <label for="fecha_nac_conyuge">Fecha de nacimiento:</label>
@@ -222,8 +230,12 @@ include_once ('../modelo/m_estado.php');
                             <input class="form-control input-sm" id="padre" name="padre" type="text" placeholder="Ejemplo: Maria Perez" onkeypress="return SoloLetras(event);">
                           </div>
                           <div class="col-xs-12 col-md-3">
-                            <label for="nac_padre"><span style="color: red; font-size: 17px;">*</span> Nacionalidad:</label>
-                            <input class="form-control input-sm" id="nac_padre" name="nac_padre" type="text" placeholder="Ejemplo: Venezolana" onkeypress="return SoloLetras(event);">
+                            <label for="sexo"><span style="color: red; font-size: 17px;">*</span> Nacionalidad:</label>
+                            <select name="nac_padre" id="nac_padre" class="form-control input-sm">
+                              <option value="">Seleccione</option>
+                              <option value="VENEZOLANA">Venezolana</option>
+                              <option value="EXTRANJERA">Extranjero</option>
+                            </select>
                           </div>
                           <div class="col-xs-12 col-md-2">
                             <label for="fecha_nac_padre"><span style="color: red; font-size: 17px;">*</span> Fecha de nacimiento:</label>
@@ -240,8 +252,12 @@ include_once ('../modelo/m_estado.php');
                             <input class="form-control input-sm" id="madre" name="madre" type="text" placeholder="Ejemplo: Maria Perez" onkeypress="return SoloLetras(event);">
                           </div>
                           <div class="col-xs-12 col-md-3">
-                            <label for="nac_madre"><span style="color: red; font-size: 17px;">*</span> Nacionalidad:</label>
-                            <input class="form-control input-sm" id="nac_madre" name="nac_madre" type="text" placeholder="Ejemplo: Venezolana" onkeypress="return SoloLetras(event);">
+                            <label for="sexo"><span style="color: red; font-size: 17px;">*</span> Nacionalidad:</label>
+                            <select name="nac_madre" id="nac_madre" class="form-control input-sm">
+                              <option value="">Seleccione</option>
+                              <option value="VENEZOLANA">Venezolana</option>
+                              <option value="EXTRANJERA">Extranjero</option>
+                            </select>
                           </div>
                           <div class="col-xs-12 col-md-2">
                             <label for="fecha_nac_madre"><span style="color: red; font-size: 17px;">*</span> Fecha de nacimiento:</label>
@@ -329,7 +345,7 @@ include_once ('../modelo/m_estado.php');
                         <div class="form-group">
                           <table class="table" id="tabla_dist_academicas">
                             <thead>
-                              <th><span style="color: red; font-size: 17px;">*</span> Distinciones académicas</th>
+                              <th> Distinciones académicas</th>
                             </thead>
                             <tr>
                               <td style="width: 30%;">
@@ -345,7 +361,7 @@ include_once ('../modelo/m_estado.php');
                         <div class="form-group">
                           <table class="table" id="tabla_part_sociales">
                             <thead>
-                              <th><span style="color: red; font-size: 17px;">*</span> Participaciones sociales, Artistas y/o Deportivas</th>
+                              <th> Participaciones sociales, Artistas y/o Deportivas</th>
                             </thead>
                             <tr>
                               <td style="width: 30%;">
@@ -406,15 +422,25 @@ include_once ('../modelo/m_estado.php');
                           </div>
                           <div class="col-xs-12 col-md-2">
                             <label for="tipo"><span style="color: red; font-size: 17px;">*</span> Tipo de Vivienda:</label>
-                            <input class="form-control input-sm" id="tipo" name="tipo" type="text" placeholder="Tipo" onkeypress="return SoloLetras(event);">
+                            <select name="tipo" id="tipo" class="form-control input-sm">
+                              <option value="">Seleccione</option>
+                              <option value="CASA">Casa</option>
+                              <option value="APARTAMENTO">Apartamento</option>
+                              <option value="QUINTA">Quinta</option>
+                              <option value="RESIDENCIA">Residencia</option>
+                            </select>
                           </div>
                           <div class="col-xs-12 col-md-1">
                             <label for="numero_vivienda"><span style="color: red; font-size: 17px;">*</span> N°:</label>
                             <input class="form-control input-sm" id="numero_vivienda" name="numero_vivienda" type="text" placeholder="00" onkeypress="return SoloNumeros(event);">
                           </div>
                           <div class="col-xs-12 col-md-2">
-                            <label for="planta">Planta:</label>
-                            <input class="form-control input-sm" id="planta" name="planta" type="text" placeholder="Ejemplo: Alta/baja" onkeypress="return SoloNumeros(event);">
+                            <label for="planta"> Planta:</label>
+                            <select name="planta" id="planta" class="form-control input-sm">
+                              <option value="">Seleccione</option>
+                              <option value="ALTA">Alta</option>
+                              <option value="BAJA">Baja</option>
+                            </select>
                           </div>
                           <div class="col-xs-12 col-md-1">
                             <label for="piso">Piso:</label>
@@ -430,6 +456,8 @@ include_once ('../modelo/m_estado.php');
                       <div id="menu3" class="tab-pane fade">
                         <h3>N° de Hijos</h3>
                         <div class="form-group">
+                        <h4>Si tiene hijos llene todos los campos o los campos obligatorios.</h4>
+                        <hr>
                           <table class="table" id="tabla_hijos">
                             <thead>
                               <th><span style="color: red; font-size: 17px;">*</span> Nombres</th>
@@ -588,8 +616,12 @@ include_once ('../modelo/m_estado.php');
                             <input class="form-control input-sm" id="fecha_dispo" name="fecha_dispo" type="date" >
                           </div>
                           <div class="col-xs-12 col-md-3">
-                            <label for="limitacion_geo"><span style="color: red; font-size: 17px;">*</span> Limitacion Geografica:</label>
-                            <input class="form-control input-sm" id="limitacion_geo" name="limitacion_geo" type="text" placeholder="">
+                            <label for="sexo"><span style="color: red; font-size: 17px;">*</span> Limitacion Geografica:</label>
+                            <select name="limitacion_geo" id="limitacion_geo" class="form-control input-sm">
+                              <option value="">Seleccione</option>
+                              <option value="SI"> Si</option>
+                              <option value="NO">No</option>
+                            </select>
                           </div>
                         </div>
                         <div class="form-group">
@@ -767,9 +799,6 @@ include_once ('../modelo/m_estado.php');
                             </td>
                           </tr>
                         </table>
-                        <div class="form-group">
-                          <button type="button" name="enviarPerson" id="enviarPerson" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> Enviar</button>
-                        </div>
                         </div>
                         <div class="form-group">
                             <strong>(<span style="color: red; font-size: 17px;">*</span>): Campos obligatorios</strong>

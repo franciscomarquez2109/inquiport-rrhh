@@ -10,9 +10,9 @@ if ($_SESSION['user']=="") {
         <!-- Logo -->
         <a href="#" class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
-          <span class="logo-mini"><img src="../assets/img/inquiport.png" alt="Logo" style="width: 90%;"></span>
+          <span class="logo-mini"><img src="../assets/img/Logo Inquiport.png" alt="Logo" style="width: 90%;"></span>
           <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg"><b>INQUIPORT S.A</b></span>
+          <span class="logo-lg"><b><img src="../assets/img/Logo Inquiport.png" alt="Logo" style="width: 22%;"> INQUIPORT S.A</b></span>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
@@ -38,7 +38,7 @@ if ($_SESSION['user']=="") {
                   <li class="user-footer">
                     <div class="pull-left"></div>
                     <div class="pull-right">
-                      <a href="#" class="btn btn-danger btn-flat"><i class="fa fa-power-off"></i> Salir</a>
+                      <a href="../control/closeSesion.php" class="btn btn-danger btn-flat"><i class="fa fa-power-off"></i> Salir</a>
                     </div>
                   </li>
                 </ul>
