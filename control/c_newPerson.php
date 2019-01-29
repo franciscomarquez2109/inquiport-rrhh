@@ -111,6 +111,15 @@ $s_inicial = $_POST['saldo_inicial'];
 $s_final = $_POST['saldo_final'];
 $m_retiro = $_POST['retiro_empresa'];
 
+//Condiciones fisicas
+$defecto_fisico = $_POST['defecto_fisico'];
+$tratamiento = $_POST['tratamiento'];
+$detalle_tratamiento = $_POST['detalle_tratamiento'];
+
+$lesiones = $_POST['lesiones'];
+$duracion_lession = $_POST['duracion_lession'];
+$estado_lesion = $_POST['estado_lesion'];
+
 //tipo de ingreso
 $tipo_ingreso = trim($_POST['tipo_ingreso']);
 
@@ -145,11 +154,34 @@ if ($ci == $row['cedula']) {
         $connect = mysqli_connect(HOST,USER,PASSWORD,DATABASE);
         $count_nivel_educ = count($nivel_educ); // cantidad de registros en distinciones acedemicas
         if($count_nivel_educ > -1){
-            //ciclo para registro de distinciones academicas
+            //ciclo para registro de distinciones academicas 
+            $count_dist = count($dist);
 	        for($i=0; $i<$count_dist; $i++){
                 $dist[$i] = strtoupper($dist[$i]);
 		        if(trim($dist[$i]) != ''){
                     $sql = "INSERT INTO tdistin_acade_acti_social (distincion_academica,idpersona) VALUES('$dist[$i]','$id')";
+                    mysqli_query($connect, $sql);
+		        }
+            }
+             //ciclo para registro de condiciones fisicas (defectos fisicos)
+             $count_defecto_fisico = count($defecto_fisico);
+	        for($i=0; $i<$count_defecto_fisico; $i++){
+                $defecto_fisico[$i] = strtoupper($defecto_fisico[$i]);
+                $tratamiento[$i] = strtoupper($tratamiento[$i]);
+                $detalle_tratamiento[$i] = strtoupper($detalle_tratamiento[$i]);
+		        if(trim($defecto_fisico[$i]) != ''){
+                    $sql = "INSERT INTO tdefecto_fisico (defecto_fisico,tratamiento,detalle_tratamiento,idpersona) VALUES('$defecto_fisico[$i]','$tratamiento[$i]','$detalle_tratamiento[$i]','$id')";
+                    mysqli_query($connect, $sql);
+		        }
+            }
+             //ciclo para registro de condiciones fisicas (lessiones / operaciones)
+             $count_lesiones = count($lesiones);
+	        for($i=0; $i<$count_lesiones; $i++){
+                $lesiones[$i] = strtoupper($lesiones[$i]);
+                $duracion_lession[$i] = strtoupper($duracion_lession[$i]);
+                $estado_lesion[$i] = strtoupper($estado_lesion[$i]);
+		        if(trim($lesiones[$i]) != ''){
+                    $sql = "INSERT INTO tafec_opera_lesiones (afec_opera_lesiones,duracion,estado_actual,idpersona) VALUES('$lesiones[$i]','$duracion_lession[$i]','$estado_lesion[$i]','$id')";
                     mysqli_query($connect, $sql);
 		        }
             }

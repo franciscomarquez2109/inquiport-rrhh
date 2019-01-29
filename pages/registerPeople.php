@@ -53,7 +53,7 @@ include_once ('../modelo/m_estado.php');
                       <li><a data-toggle="tab" href="#menu4"><i class="fa fa-graduation-cap"></i> Grado Academico</a></li>
                       <li><a data-toggle="tab" href="#menu5"><i class="fa fa-arrows-alt"></i> Area de Interes</a></li>
                       <li><a data-toggle="tab" href="#menu6"><i class="fa fa-car"></i> Vehiculos</a></li>
-                      <li class="disabled"><a data-toggle="tab" href="#"><i class="fa fa-plus"></i> Condiciones Fisicas</a></li>
+                      <li><a data-toggle="tab" href="#menu7"><i class="fa fa-plus"></i> Condiciones Fisicas</a></li>
                       <li><a data-toggle="tab" href="#menu8"><i class="fa fa-building"></i> Experiencia Laboral</a></li>
                       <li><a data-toggle="tab" href="#menu9"><i class="fa fa-road"></i> Referencias</a></li>
                       <li class="disabled"><a data-toggle="tab" href="#"><i class="fa fa-file"></i> Consignación de Documentos</a></li>
@@ -714,6 +714,52 @@ include_once ('../modelo/m_estado.php');
                       <!-- pestaña condicion fisica-->
                       <div id="menu7" class="tab-pane fade in">
                         <h3>Condiciones Fisicas</h3>
+                        <div class="form-group">
+                          <table class="table" id="tabla_defecto_fisico">
+                            <thead>
+                              <th>Defecto Fisico o Problema de Salud</th>
+                              <th>¿Esta en Tratamiento?</th>
+                              <th>Especifique</th>
+                            </thead>
+                            <tr>
+                              <td>
+                                <input type="text" name="defecto_fisico[]" id="defecto_fisico[]" placeholder="Nombre del Problema" class="form-control name_list input-sm" onkeypress="return SoloLetras(event);"/>
+                              </td>
+                              <td>
+                              <label class="radio-inline"><input type="radio" id="tratamiento" name="tratamiento[]" value="SI">SI</label>
+                              <label class="radio-inline"><input type="radio" id="tratamiento" name="tratamiento[]" value="NO">NO</label>
+                              </td>
+                            <td>
+                              <input type="text" name="detalle_tratamiento[]" id="detalle_tratamiento[]" placeholder="Explique" class="form-control name_list input-sm"/>
+                            </td>                            
+                            <td>
+                              <button type="button" name="add_defecto" id="add_defecto" class="btn btn-success btn-sm"><i class="fa fa-plus"></i></button>
+                            </td>
+                          </tr>
+                        </table>
+                        <table class="table" id="tabla_lesiones">
+                            <thead>
+                              <th>Afecciones / Operaciones / Lesiones</th>
+                              <th>duración</th>
+                              <th>Estado Actual</th>
+                            </thead>
+                            <tr>
+                              <td>
+                                <input type="text" name="lesiones[]" id="lesiones[]" placeholder="Nombre de alguna lesion, Operacion o Afección" class="form-control name_list input-sm" onkeypress="return SoloLetras(event);"/>
+                              </td>
+                              <td>
+                                <input type="text" name="duracion_lession[]" id="duracion_lession[]" placeholder="Años/Meses" class="form-control name_list input-sm"/>
+                              </td>
+                            <td>
+                              <input type="text" name="estado_lesion[]" id="estado_lesion[]" placeholder="Estado de la lesion" class="form-control name_list input-sm" onkeypress="return SoloLetras(event);"/>
+                            </td>                            
+                            <td>
+                              <button type="button" name="add_lesion" id="add_lesion" class="btn btn-success btn-sm"><i class="fa fa-plus"></i></button>
+                            </td>
+                          </tr>
+                        </table>
+                        </div>
+                        
                       </div>
                       <!-- pestaña experiencia laboral-->
                       <div id="menu8" class="tab-pane fade in">
@@ -1167,12 +1213,15 @@ include_once ('../modelo/m_estado.php');
   <script src="../assets/js/fastclick.js"></script>
   <!-- AdminLTE App -->
   <script src="../assets/js/app.js"></script>
+  <!-- 
   <script src="../assets/js/addChil.js"></script>
   <script src="../assets/js/add_part_sociales.js"></script>
   <script src="../assets/js/add_dist_academicas.js"></script>
   <script src="../assets/js/add_grado_inst.js"></script>
   <script src="../assets/js/add_referencias.js"></script>
   <script src="../assets/js/add_experiencia.js"></script>
+  -->
+  <script src="../assets/js/add_lessiones_defectos.js"></script>
   <script src="../assets/js/newPerson.js"></script>
   <script src="../assets/js/disabledInputs.js"></script>
   <script src="../assets/js/calcularEdad.js"></script>
