@@ -155,17 +155,19 @@ if ($_SESSION['user']=="") {
                             <div class="form-group row">
                               <div class="col-xs-3">
                                   <label for="fi">Fecha Inicial:</label>
-                                  <input class="form-control input-sm" id="fi" name="fi" type="date">
+                                  <input class="form-control input-sm" id="fecha_inicio_nueva" name="fecha_inicio_nueva" type="date">
                               </div>
                               <div class="col-xs-3">
                                   <label for="ff">Fecha Final:</label>
-                                  <input class="form-control input-sm" id="ff" name="ff" type="date">
+                                  <input class="form-control input-sm" id="fecha_final_nueva" name="fecha_final_nueva" type="date">
                                 </div>
                             </div>
+                            
                             <hr>
                             <div class="form-group">
-                              <button type="button" name="genera_new_corte" id="genera_new_corte" class="btn btn-success btn-sm"><i class="fa fa-check"></i> Aceptar</button>
+                              <button type="button" name="genera_tabla" id="genera_new_t" class="btn btn-success btn-sm"><i class="fa fa-check"></i> Aceptar</button>
                             </div>
+                            </form>
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -183,16 +185,18 @@ if ($_SESSION['user']=="") {
                           <h4 class="modal-title">Generar Corte</h4>
                         </div>
                         <div class="modal-body">
+                        <form id="form_corte_tabla">
                             <div class="form-group">
                               <label for="fi">Fecha Inicial:</label>
-                              <input class="form-control input-sm" id="fi" name="fi" type="date">
+                              <input class="form-control input-sm" id="cortefi" name="cortefi" type="date">
                               <label for="ff">Fecha Final:</label>
-                              <input class="form-control input-sm" id="ff" name="ff" type="date">
+                              <input class="form-control input-sm" id="corteff" name="corteff" type="date">
                             </div>
                             <hr>
                             <div class="form-group">
                               <button type="button" name="genera_new_corte" id="genera_new_corte" class="btn btn-success btn-sm"><i class="fa fa-check"></i> Aceptar</button>
                             </div>
+                        </form>
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -223,6 +227,7 @@ if ($_SESSION['user']=="") {
                         <li class="list-group-item">Fecha Inicial: <p><strong><?php echo $row['fecha_inicio'];?></strong></p></li>
                         <li class="list-group-item">Fecha Final: <p><strong><?php echo $row['fecha_final'];?></strong></p></li>
                         <li class="list-group-item">Fecha Registro: <p><strong><?php echo $row['fecha_registro'];?></strong></p></li>
+                        <li class="list-group-item">Fecha corte: <p><strong><?php echo $row['fecha_corte'];?></strong></p></li>
                     </ul>
                 </div>
               </div>
@@ -251,10 +256,8 @@ if ($_SESSION['user']=="") {
   <script src="../assets/js/newTable.js"></script>
   <script src="../assets/js/disabledOptions.js"></script>
   <script src="../assets/js/searchTablePrima.js"></script>
-
- 
-
-
+  <script src="../assets/js/corteTabla.js"></script>
+  <script src="../assets/js/nuevaTabla.js"></script>
 
 </body>
 </html>

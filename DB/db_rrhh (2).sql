@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 01-11-2018 a las 16:04:29
+-- Tiempo de generación: 29-01-2019 a las 18:55:38
 -- Versión del servidor: 5.7.17-log
 -- Versión de PHP: 5.6.30
 
@@ -14,7 +14,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+
 
 --
 -- Base de datos: `db_rrhh`
@@ -29,6 +29,20 @@ SET time_zone = "+00:00";
 CREATE TABLE `tactividad_social` (
   `idactividad_social` int(11) NOT NULL,
   `actividad_social` varchar(70) NOT NULL,
+  `idpersona` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tafec_opera_lesiones`
+--
+
+CREATE TABLE `tafec_opera_lesiones` (
+  `idafec_opera_lesiones` int(11) NOT NULL,
+  `afec_opera_lesiones` varchar(70) NOT NULL,
+  `duracion` varchar(20) NOT NULL,
+  `estado_actual` varchar(20) NOT NULL,
   `idpersona` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -58,34 +72,8 @@ CREATE TABLE `tasegurado` (
   `idtipo_nomina` int(11) NOT NULL,
   `iddepartamento` int(11) NOT NULL,
   `maternidad` varchar(3) NOT NULL,
-  `idcondicion` int(11) NOT NULL,
-  `monto_prima` decimal(19,4) NOT NULL,
-  `mes_prima` int(11) NOT NULL,
-  `monto` decimal(19,4) NOT NULL,
-  `monto_empresa` decimal(19,4) NOT NULL,
-  `monto_empleado` decimal(19,4) NOT NULL,
   `estatus` int(1) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `tcondicion`
---
-
-CREATE TABLE `tcondicion` (
-  `idcondicion` int(11) NOT NULL,
-  `condicion` varchar(20) NOT NULL,
-  `estatus` int(1) NOT NULL DEFAULT '1'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Volcado de datos para la tabla `tcondicion`
---
-
-INSERT INTO `tcondicion` (`idcondicion`, `condicion`, `estatus`) VALUES
-(1, 'ACTIVO', 1),
-(2, 'TERCEROS', 1);
 
 -- --------------------------------------------------------
 
@@ -98,6 +86,104 @@ CREATE TABLE `tconocimiento_ofimatico` (
   `idpersona` int(11) NOT NULL,
   `conocimiento_ofimatico` varchar(20) NOT NULL,
   `version` varchar(5) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tcordenadas`
+--
+
+CREATE TABLE `tcordenadas` (
+  `idcordenadas` int(11) NOT NULL,
+  `n_s` varchar(11) NOT NULL,
+  `idusuario` int(11) NOT NULL,
+  `a1` varchar(6) NOT NULL,
+  `a2` varchar(6) NOT NULL,
+  `a3` varchar(6) NOT NULL,
+  `a4` varchar(6) NOT NULL,
+  `a5` varchar(6) NOT NULL,
+  `a6` varchar(6) NOT NULL,
+  `a7` varchar(6) NOT NULL,
+  `a8` varchar(6) NOT NULL,
+  `b1` varchar(6) NOT NULL,
+  `b2` varchar(6) NOT NULL,
+  `b3` varchar(6) NOT NULL,
+  `b4` varchar(6) NOT NULL,
+  `b5` varchar(6) NOT NULL,
+  `b6` varchar(6) NOT NULL,
+  `b7` varchar(6) NOT NULL,
+  `b8` varchar(6) NOT NULL,
+  `c1` varchar(6) NOT NULL,
+  `c2` varchar(6) NOT NULL,
+  `c3` varchar(6) NOT NULL,
+  `c4` varchar(6) NOT NULL,
+  `c5` varchar(6) NOT NULL,
+  `c6` varchar(6) NOT NULL,
+  `c7` varchar(6) NOT NULL,
+  `c8` varchar(6) NOT NULL,
+  `d1` varchar(6) NOT NULL,
+  `d2` varchar(6) NOT NULL,
+  `d3` varchar(6) NOT NULL,
+  `d4` varchar(6) NOT NULL,
+  `d5` varchar(6) NOT NULL,
+  `d6` varchar(6) NOT NULL,
+  `d7` varchar(6) NOT NULL,
+  `d8` varchar(6) NOT NULL,
+  `e1` varchar(6) NOT NULL,
+  `e2` varchar(6) NOT NULL,
+  `e3` varchar(6) NOT NULL,
+  `e4` varchar(6) NOT NULL,
+  `e5` varchar(6) NOT NULL,
+  `e6` varchar(6) NOT NULL,
+  `e7` varchar(6) NOT NULL,
+  `e8` varchar(6) NOT NULL,
+  `f1` varchar(6) NOT NULL,
+  `f2` varchar(6) NOT NULL,
+  `f3` varchar(6) NOT NULL,
+  `f4` varchar(6) NOT NULL,
+  `f5` varchar(6) NOT NULL,
+  `f6` varchar(6) NOT NULL,
+  `f7` varchar(6) NOT NULL,
+  `f8` varchar(6) NOT NULL,
+  `g1` varchar(6) NOT NULL,
+  `g2` varchar(6) NOT NULL,
+  `g3` varchar(6) NOT NULL,
+  `g4` varchar(6) NOT NULL,
+  `g5` varchar(6) NOT NULL,
+  `g6` varchar(6) NOT NULL,
+  `g7` varchar(6) NOT NULL,
+  `g8` varchar(6) NOT NULL,
+  `h1` varchar(6) NOT NULL,
+  `h2` varchar(6) NOT NULL,
+  `h3` varchar(6) NOT NULL,
+  `h4` varchar(6) NOT NULL,
+  `h5` varchar(6) NOT NULL,
+  `h6` varchar(6) NOT NULL,
+  `h7` varchar(6) NOT NULL,
+  `h8` varchar(6) NOT NULL,
+  `estatus` int(11) NOT NULL DEFAULT '1'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `tcordenadas`
+--
+
+INSERT INTO `tcordenadas` (`idcordenadas`, `n_s`, `idusuario`, `a1`, `a2`, `a3`, `a4`, `a5`, `a6`, `a7`, `a8`, `b1`, `b2`, `b3`, `b4`, `b5`, `b6`, `b7`, `b8`, `c1`, `c2`, `c3`, `c4`, `c5`, `c6`, `c7`, `c8`, `d1`, `d2`, `d3`, `d4`, `d5`, `d6`, `d7`, `d8`, `e1`, `e2`, `e3`, `e4`, `e5`, `e6`, `e7`, `e8`, `f1`, `f2`, `f3`, `f4`, `f5`, `f6`, `f7`, `f8`, `g1`, `g2`, `g3`, `g4`, `g5`, `g6`, `g7`, `g8`, `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `h7`, `h8`, `estatus`) VALUES
+(1, '00254254jh', 1, 'UNLV', 'NJ53', 'VZUS', 'J1YD', 'O3S0', 'AE43', 'VUV2', 'ZK37', '5KLV', 'T7X5', 'QU3J', '47FU', 'UMJY', '3CKI', '62Y1', '282H', 'RR12', 'SCBI', 'J18L', 'EYWW', 'SVXW', 'LXCQ', 'E5OZ', 'IYI2', 'FH46', 'CB5O', 'QJ6U', '8WS2', 'XGM1', '2SXL', 'Z6XU', '3W39', '4FH3', '7FFJ', '34NN', 'FMCX', 'S5YA', 'PMFF', '2TC4', 'L1RR', 'RW6I', '8GND', 'IVH6', 'E4HK', 'QRWA', '4MSO', '744U', 'NZDO', 'GRDV', 'XPRN', 'B1J5', 'QDPK', 'KJYQ', 'RLQD', 'F737', 'RGIE', 'DZ6L', 'QZY7', '0XJM', 'S6OY', 'JKFK', 'PCCM', 'W0OH', '30AS', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tdefecto_fisico`
+--
+
+CREATE TABLE `tdefecto_fisico` (
+  `iddefecto_fisico` int(11) NOT NULL,
+  `defecto_fisico` varchar(70) NOT NULL,
+  `tratamiento` varchar(2) NOT NULL,
+  `detalle_tratamiento` varchar(255) NOT NULL,
+  `idpersona` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -140,23 +226,17 @@ CREATE TABLE `tdependiente` (
   `iddependiente` int(11) NOT NULL,
   `idasegurado` int(11) NOT NULL,
   `cedula` varchar(8) NOT NULL,
-  `nombre1` varchar(70) NOT NULL,
-  `nombre2` varchar(70) DEFAULT NULL,
-  `apellido1` varchar(70) NOT NULL,
-  `apellido2` varchar(70) DEFAULT NULL,
+  `nom1` varchar(70) NOT NULL,
+  `nom2` varchar(70) DEFAULT NULL,
+  `ape1` varchar(70) NOT NULL,
+  `ape2` varchar(70) DEFAULT NULL,
   `sexo` varchar(15) NOT NULL,
   `fecha_nac` date NOT NULL,
   `edad` int(3) NOT NULL,
   `maternidad` varchar(2) NOT NULL,
-  `idcondicion` int(11) NOT NULL,
   `idparentesco` int(11) NOT NULL,
   `idestado_civil` int(11) NOT NULL,
   `hijos_hasta_25` varchar(2) NOT NULL,
-  `monto_prima` decimal(19,4) NOT NULL,
-  `mes_prima` int(11) NOT NULL,
-  `monto` decimal(19,4) NOT NULL,
-  `monto_empresa` decimal(19,4) NOT NULL,
-  `monto_empleado` decimal(19,4) NOT NULL,
   `estatus` int(1) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -330,6 +410,63 @@ CREATE TABLE `thijos` (
   `nacimiento` varchar(20) NOT NULL,
   `ci_hijo` varchar(8) DEFAULT NULL,
   `ocupacion_hijo` varchar(40) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tingreso`
+--
+
+CREATE TABLE `tingreso` (
+  `idingreso` int(1) NOT NULL,
+  `ingreso` varchar(40) NOT NULL,
+  `estatus` int(1) NOT NULL DEFAULT '1'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `tingreso`
+--
+
+INSERT INTO `tingreso` (`idingreso`, `ingreso`, `estatus`) VALUES
+(1, 'ACTIVO', 1),
+(2, 'BANCO ELEGIBLE', 1),
+(4, 'TERCERO', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tmontos_asegurado`
+--
+
+CREATE TABLE `tmontos_asegurado` (
+  `idmonto_asegurado` int(11) NOT NULL,
+  `monto_prima_asegurado` decimal(19,4) NOT NULL,
+  `mes_prima_asegurado` int(2) NOT NULL,
+  `monto_asegurado` decimal(19,4) NOT NULL,
+  `monto_empleado_asegurado` decimal(19,4) NOT NULL,
+  `monto_empresa_asegurado` decimal(19,4) NOT NULL,
+  `fecha_corte_asegurado` date NOT NULL,
+  `idasegurado` int(11) NOT NULL,
+  `estatus` int(1) NOT NULL DEFAULT '1'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tmontos_dependiente`
+--
+
+CREATE TABLE `tmontos_dependiente` (
+  `idmonto_dependiente` int(11) NOT NULL,
+  `monto_prima_dependiente` decimal(19,4) NOT NULL,
+  `mes_prima_dependiente` int(2) NOT NULL,
+  `monto_dependiente` decimal(19,4) NOT NULL,
+  `monto_empleado_dependiente` decimal(19,4) NOT NULL,
+  `monto_empresa_dependiente` decimal(19,4) NOT NULL,
+  `fecha_corte_dependiente` date NOT NULL,
+  `iddependiente` int(11) NOT NULL,
+  `estatus` int(1) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -2164,6 +2301,7 @@ CREATE TABLE `tpersona` (
   `limitacion_geografica` varchar(2) NOT NULL,
   `posee_vehiculo` varchar(2) DEFAULT NULL,
   `idestado_civil` int(11) DEFAULT NULL,
+  `idingreso` int(11) NOT NULL,
   `estatus` int(1) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -2212,21 +2350,21 @@ CREATE TABLE `ttabla_prima` (
 --
 
 INSERT INTO `ttabla_prima` (`idtabla_prima`, `numero`, `sexo`, `maternidad`, `hasta25`, `edad_min`, `edad_max`, `prima_semanal`, `prima_quincenal`, `prima_ejecutivo`, `descripcion`, `fecha_inicio`, `fecha_final`, `fecha_registro`, `estatus`) VALUES
-(8, 'F01', 'FEMENINO', 'NO', 'NO', 0, 65, '804.9600', '804.9600', '1105.4800', NULL, '2017-01-01', '2018-01-01', '2018-10-22', 1),
-(9, 'F02', 'FEMENINO', 'NO', 'NO', 66, 70, '897.8400', '897.8400', '1233.0300', NULL, '2018-01-01', '2018-01-01', '2018-10-22', 1),
-(10, 'F03', 'FEMENINO', 'NO', 'NO', 71, 70, '1015.4900', '1015.4900', '1394.6000', NULL, '2017-01-01', '2018-01-01', '2018-10-22', 1),
-(11, 'F04', 'FEMENINO', 'SI', 'NO', 0, 55, '1144.5600', '1144.5600', '1530.6600', NULL, '2017-01-01', '2018-01-01', '2018-10-22', 1),
-(12, 'F05', 'FEMENINO', 'NO', 'SI', 0, 25, '464.4000', '464.4000', '637.7800', NULL, '2017-01-01', '2018-01-01', '2018-10-22', 1),
-(13, 'F06', 'FEMENINO', 'NO', 'NO', 26, 55, '743.0400', '743.0400', '1020.4400', NULL, '2017-01-01', '2018-01-01', '2018-10-22', 1),
-(14, 'F07', 'FEMENINO', 'NO', 'NO', 0, 70, '1102.1800', '1102.1800', '1513.6600', NULL, '2017-01-01', '2018-01-01', '2018-10-22', 1),
-(15, 'F08', 'FEMENINO', 'NO', 'NO', 71, 80, '1609.2200', '1609.2200', '2210.9600', NULL, '2017-01-01', '2018-01-01', '2018-10-22', 1),
-(16, 'M01', 'MASCULINO', 'NO', 'NO', 0, 65, '619.2000', '619.2000', '850.3700', NULL, '2017-01-01', '2018-01-01', '2018-10-22', 1),
-(17, 'M02', 'MASCULINO', 'NO', 'NO', 66, 70, '743.0400', '743.0400', '1020.4400', NULL, '2017-01-01', '2018-01-01', '2018-10-22', 1),
-(18, 'M03', 'MASCULINO', 'NO', 'NO', 71, 80, '842.1100', '842.1100', '1156.5000', NULL, '2017-01-01', '2018-01-01', '2018-10-22', 1),
-(19, 'M04', 'MASCULINO', 'NO', 'SI', 0, 25, '464.4000', '464.4000', '637.7800', NULL, '2017-01-01', '2018-01-01', '2018-10-22', 1),
-(20, 'M05', 'MASCULINO', 'NO', 'NO', 26, 65, '619.2000', '619.2000', '850.3700', NULL, '2017-01-01', '2018-01-01', '2018-10-22', 1),
-(21, 'M06', 'MASCULINO', 'NO', 'NO', 0, 70, '1102.1800', '1102.1800', '1513.6600', NULL, '2017-01-01', '2018-01-01', '2018-10-22', 1),
-(22, 'M07', 'MASCULINO', 'NO', 'NO', 71, 80, '1609.2200', '1609.2200', '2210.9600', NULL, '2017-01-01', '2018-01-01', '2018-10-22', 1);
+(8, 'F01', 'FEMENINO', 'NO', 'NO', 0, 65, '804.9600', '804.9600', '1105.4800', NULL, '2019-01-01', '2020-01-01', '2018-10-22', 1),
+(9, 'F02', 'FEMENINO', 'NO', 'NO', 66, 70, '897.8400', '897.8400', '1233.0300', NULL, '2019-01-01', '2020-01-01', '2018-10-22', 1),
+(10, 'F03', 'FEMENINO', 'NO', 'NO', 71, 70, '1015.4900', '1015.4900', '1394.6000', NULL, '2019-01-01', '2020-01-01', '2018-10-22', 1),
+(11, 'F04', 'FEMENINO', 'SI', 'NO', 0, 55, '1144.5600', '1144.5600', '1530.6600', NULL, '2019-01-01', '2020-01-01', '2018-10-22', 1),
+(12, 'F05', 'FEMENINO', 'NO', 'SI', 0, 25, '464.4000', '464.4000', '637.7800', NULL, '2019-01-01', '2020-01-01', '2018-10-22', 1),
+(13, 'F06', 'FEMENINO', 'NO', 'NO', 26, 55, '743.0400', '743.0400', '1020.4400', NULL, '2019-01-01', '2020-01-01', '2018-10-22', 1),
+(14, 'F07', 'FEMENINO', 'NO', 'NO', 0, 70, '1102.1800', '1102.1800', '1513.6600', NULL, '2019-01-01', '2020-01-01', '2018-10-22', 1),
+(15, 'F08', 'FEMENINO', 'NO', 'NO', 71, 80, '1609.2200', '1609.2200', '2210.9600', NULL, '2019-01-01', '2020-01-01', '2018-10-22', 1),
+(16, 'M01', 'MASCULINO', 'NO', 'NO', 0, 65, '619.2000', '619.2000', '850.3700', NULL, '2019-01-01', '2020-01-01', '2018-10-22', 1),
+(17, 'M02', 'MASCULINO', 'NO', 'NO', 66, 70, '743.0400', '743.0400', '1020.4400', NULL, '2019-01-01', '2020-01-01', '2018-10-22', 1),
+(18, 'M03', 'MASCULINO', 'NO', 'NO', 71, 80, '842.1100', '842.1100', '1156.5000', NULL, '2019-01-01', '2020-01-01', '2018-10-22', 1),
+(19, 'M04', 'MASCULINO', 'NO', 'SI', 0, 25, '464.4000', '464.4000', '637.7800', NULL, '2019-01-01', '2020-01-01', '2018-10-22', 1),
+(20, 'M05', 'MASCULINO', 'NO', 'NO', 26, 65, '619.2000', '619.2000', '850.3700', NULL, '2019-01-01', '2020-01-01', '2018-10-22', 1),
+(21, 'M06', 'MASCULINO', 'NO', 'NO', 0, 70, '1102.1800', '1102.1800', '1513.6600', NULL, '2019-01-01', '2020-01-01', '2018-10-22', 1),
+(22, 'M07', 'MASCULINO', 'NO', 'NO', 71, 80, '1609.2200', '1609.2200', '2210.9600', NULL, '2019-01-01', '2020-01-01', '2018-10-22', 1);
 
 -- --------------------------------------------------------
 
@@ -2260,7 +2398,7 @@ CREATE TABLE `tusuario` (
   `idusuario_clave` int(10) NOT NULL,
   `idusuario_preguntas` int(10) NOT NULL,
   `idusuario_perfil` int(10) NOT NULL,
-  `usuario` varchar(9) NOT NULL,
+  `usuario` varchar(15) NOT NULL,
   `inicio_sesion` int(1) NOT NULL,
   `primer_inicio` int(1) NOT NULL,
   `bloqueado` int(1) NOT NULL,
@@ -2277,7 +2415,8 @@ CREATE TABLE `tusuario` (
 --
 
 INSERT INTO `tusuario` (`idusuario`, `idusuario_clave`, `idusuario_preguntas`, `idusuario_perfil`, `usuario`, `inicio_sesion`, `primer_inicio`, `bloqueado`, `intentos_fallidos`, `fecha_creacion`, `fecha_final`, `hora_salida`, `fecha_salida`, `estatus`) VALUES
-(0, 0, 0, 1, 'FMARQUEZ', 1, 1, 0, 0, '2018-10-02', '0000-00-00', '01:00:00', '2018-10-02', 1);
+(1, 0, 0, 1, 'FMARQUEZ', 1, 1, 0, 0, '2018-10-02', '0000-00-00', '01:00:00', '2018-10-02', 1),
+(2, 1, 0, 3, 'ABELANDRIA', 1, 1, 0, 0, '2019-01-19', '0000-00-00', '00:00:00', '0000-00-00', 1);
 
 -- --------------------------------------------------------
 
@@ -2298,7 +2437,8 @@ CREATE TABLE `tusuario_clave` (
 --
 
 INSERT INTO `tusuario_clave` (`idusuario_clave`, `clave`, `fecha_inicio`, `fecha_fin`, `clave_anterior`) VALUES
-(0, '1234', '2018-10-02', '0000-00-00', '2222');
+(0, '1234', '2018-10-02', '0000-00-00', '2222'),
+(1, '1234', '2019-01-19', '2019-01-28', '1234');
 
 -- --------------------------------------------------------
 
@@ -2318,7 +2458,8 @@ CREATE TABLE `tusuario_perfil` (
 
 INSERT INTO `tusuario_perfil` (`idusuario_perfil`, `idperfil_mayor`, `perfiles`) VALUES
 (1, 0, 'ROOT'),
-(2, 1, 'ADMIN');
+(2, 1, 'ADMIN'),
+(3, 1, 'USER');
 
 -- --------------------------------------------------------
 
@@ -2377,6 +2518,13 @@ ALTER TABLE `tactividad_social`
   ADD KEY `idpersona` (`idpersona`);
 
 --
+-- Indices de la tabla `tafec_opera_lesiones`
+--
+ALTER TABLE `tafec_opera_lesiones`
+  ADD PRIMARY KEY (`idafec_opera_lesiones`),
+  ADD KEY `idpersona` (`idpersona`) USING BTREE;
+
+--
 -- Indices de la tabla `tarea_interes`
 --
 ALTER TABLE `tarea_interes`
@@ -2390,14 +2538,7 @@ ALTER TABLE `tasegurado`
   ADD PRIMARY KEY (`idasegurado`),
   ADD KEY `idpersona` (`idpersona`),
   ADD KEY `idtipo_nomina` (`idtipo_nomina`),
-  ADD KEY `iddepartamento` (`iddepartamento`),
-  ADD KEY `idcondicion` (`idcondicion`);
-
---
--- Indices de la tabla `tcondicion`
---
-ALTER TABLE `tcondicion`
-  ADD PRIMARY KEY (`idcondicion`);
+  ADD KEY `iddepartamento` (`iddepartamento`);
 
 --
 -- Indices de la tabla `tconocimiento_ofimatico`
@@ -2405,6 +2546,21 @@ ALTER TABLE `tcondicion`
 ALTER TABLE `tconocimiento_ofimatico`
   ADD PRIMARY KEY (`idconocimiento_ofimatico`),
   ADD KEY `idpersona` (`idpersona`);
+
+--
+-- Indices de la tabla `tcordenadas`
+--
+ALTER TABLE `tcordenadas`
+  ADD PRIMARY KEY (`idcordenadas`),
+  ADD UNIQUE KEY `n/s` (`n_s`),
+  ADD KEY `idusuario` (`idusuario`);
+
+--
+-- Indices de la tabla `tdefecto_fisico`
+--
+ALTER TABLE `tdefecto_fisico`
+  ADD PRIMARY KEY (`iddefecto_fisico`),
+  ADD KEY `idpersona` (`idpersona`) USING BTREE;
 
 --
 -- Indices de la tabla `tdepartamento`
@@ -2420,8 +2576,7 @@ ALTER TABLE `tdependiente`
   ADD PRIMARY KEY (`iddependiente`),
   ADD KEY `idasegurado` (`idasegurado`),
   ADD KEY `idparentesco` (`idparentesco`),
-  ADD KEY `idestado_civil` (`idestado_civil`),
-  ADD KEY `idcondicion` (`idcondicion`);
+  ADD KEY `idestado_civil` (`idestado_civil`);
 
 --
 -- Indices de la tabla `tdireccion`
@@ -2478,6 +2633,26 @@ ALTER TABLE `thijos`
   ADD KEY `idpersona` (`idpersona`);
 
 --
+-- Indices de la tabla `tingreso`
+--
+ALTER TABLE `tingreso`
+  ADD PRIMARY KEY (`idingreso`);
+
+--
+-- Indices de la tabla `tmontos_asegurado`
+--
+ALTER TABLE `tmontos_asegurado`
+  ADD PRIMARY KEY (`idmonto_asegurado`),
+  ADD KEY `idasegurado` (`idasegurado`);
+
+--
+-- Indices de la tabla `tmontos_dependiente`
+--
+ALTER TABLE `tmontos_dependiente`
+  ADD PRIMARY KEY (`idmonto_dependiente`) USING BTREE,
+  ADD KEY `iddependiente` (`iddependiente`);
+
+--
 -- Indices de la tabla `tmunicipios`
 --
 ALTER TABLE `tmunicipios`
@@ -2509,7 +2684,8 @@ ALTER TABLE `tparroquias`
 ALTER TABLE `tpersona`
   ADD PRIMARY KEY (`idpersona`),
   ADD UNIQUE KEY `cedula` (`cedula`),
-  ADD KEY `idestado_civil` (`idestado_civil`);
+  ADD KEY `idestado_civil` (`idestado_civil`),
+  ADD KEY `tpersona_ibfk_4` (`idingreso`);
 
 --
 -- Indices de la tabla `treferencias`
@@ -2573,27 +2749,37 @@ ALTER TABLE `tvehiculo`
 -- AUTO_INCREMENT de la tabla `tactividad_social`
 --
 ALTER TABLE `tactividad_social`
-  MODIFY `idactividad_social` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idactividad_social` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT de la tabla `tafec_opera_lesiones`
+--
+ALTER TABLE `tafec_opera_lesiones`
+  MODIFY `idafec_opera_lesiones` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `tarea_interes`
 --
 ALTER TABLE `tarea_interes`
-  MODIFY `idarea_interes` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idarea_interes` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT de la tabla `tasegurado`
 --
 ALTER TABLE `tasegurado`
-  MODIFY `idasegurado` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT de la tabla `tcondicion`
---
-ALTER TABLE `tcondicion`
-  MODIFY `idcondicion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idasegurado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT de la tabla `tconocimiento_ofimatico`
 --
 ALTER TABLE `tconocimiento_ofimatico`
-  MODIFY `idconocimiento_ofimatico` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idconocimiento_ofimatico` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+--
+-- AUTO_INCREMENT de la tabla `tcordenadas`
+--
+ALTER TABLE `tcordenadas`
+  MODIFY `idcordenadas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT de la tabla `tdefecto_fisico`
+--
+ALTER TABLE `tdefecto_fisico`
+  MODIFY `iddefecto_fisico` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT de la tabla `tdepartamento`
 --
@@ -2603,17 +2789,17 @@ ALTER TABLE `tdepartamento`
 -- AUTO_INCREMENT de la tabla `tdependiente`
 --
 ALTER TABLE `tdependiente`
-  MODIFY `iddependiente` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `iddependiente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `tdireccion`
 --
 ALTER TABLE `tdireccion`
-  MODIFY `iddireccion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `iddireccion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT de la tabla `tdistin_acade_acti_social`
 --
 ALTER TABLE `tdistin_acade_acti_social`
-  MODIFY `iddistin_acade_acti_social` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `iddistin_acade_acti_social` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT de la tabla `testado_civil`
 --
@@ -2623,7 +2809,7 @@ ALTER TABLE `testado_civil`
 -- AUTO_INCREMENT de la tabla `texperiencia_laboral`
 --
 ALTER TABLE `texperiencia_laboral`
-  MODIFY `idexperiencia_laboral` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idexperiencia_laboral` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT de la tabla `tgerencia`
 --
@@ -2633,12 +2819,27 @@ ALTER TABLE `tgerencia`
 -- AUTO_INCREMENT de la tabla `tgrado_instruccion`
 --
 ALTER TABLE `tgrado_instruccion`
-  MODIFY `idgrado_instruccion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idgrado_instruccion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT de la tabla `thijos`
 --
 ALTER TABLE `thijos`
-  MODIFY `idhijos` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idhijos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT de la tabla `tingreso`
+--
+ALTER TABLE `tingreso`
+  MODIFY `idingreso` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT de la tabla `tmontos_asegurado`
+--
+ALTER TABLE `tmontos_asegurado`
+  MODIFY `idmonto_asegurado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT de la tabla `tmontos_dependiente`
+--
+ALTER TABLE `tmontos_dependiente`
+  MODIFY `idmonto_dependiente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `tpaises`
 --
@@ -2653,12 +2854,12 @@ ALTER TABLE `tparentesco`
 -- AUTO_INCREMENT de la tabla `tpersona`
 --
 ALTER TABLE `tpersona`
-  MODIFY `idpersona` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=178;
+  MODIFY `idpersona` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT de la tabla `treferencias`
 --
 ALTER TABLE `treferencias`
-  MODIFY `idreferencias` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `idreferencias` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT de la tabla `ttabla_prima`
 --
@@ -2685,6 +2886,12 @@ ALTER TABLE `tactividad_social`
   ADD CONSTRAINT `tactividad_social_ibfk_1` FOREIGN KEY (`idpersona`) REFERENCES `tpersona` (`idpersona`);
 
 --
+-- Filtros para la tabla `tafec_opera_lesiones`
+--
+ALTER TABLE `tafec_opera_lesiones`
+  ADD CONSTRAINT `tafec_opera_lesiones_ibfk_1` FOREIGN KEY (`idpersona`) REFERENCES `tpersona` (`idpersona`);
+
+--
 -- Filtros para la tabla `tarea_interes`
 --
 ALTER TABLE `tarea_interes`
@@ -2696,14 +2903,25 @@ ALTER TABLE `tarea_interes`
 ALTER TABLE `tasegurado`
   ADD CONSTRAINT `tasegurado_ibfk_1` FOREIGN KEY (`idpersona`) REFERENCES `tpersona` (`idpersona`),
   ADD CONSTRAINT `tasegurado_ibfk_2` FOREIGN KEY (`idtipo_nomina`) REFERENCES `ttiponomina` (`idtipo_nomina`),
-  ADD CONSTRAINT `tasegurado_ibfk_3` FOREIGN KEY (`iddepartamento`) REFERENCES `tdepartamento` (`iddepartamento`),
-  ADD CONSTRAINT `tasegurado_ibfk_4` FOREIGN KEY (`idcondicion`) REFERENCES `tcondicion` (`idcondicion`);
+  ADD CONSTRAINT `tasegurado_ibfk_3` FOREIGN KEY (`iddepartamento`) REFERENCES `tdepartamento` (`iddepartamento`);
 
 --
 -- Filtros para la tabla `tconocimiento_ofimatico`
 --
 ALTER TABLE `tconocimiento_ofimatico`
   ADD CONSTRAINT `tconocimiento_ofimatico_ibfk_1` FOREIGN KEY (`idpersona`) REFERENCES `tpersona` (`idpersona`);
+
+--
+-- Filtros para la tabla `tcordenadas`
+--
+ALTER TABLE `tcordenadas`
+  ADD CONSTRAINT `tcordenadas_ibfk_1` FOREIGN KEY (`idusuario`) REFERENCES `tusuario` (`idusuario`);
+
+--
+-- Filtros para la tabla `tdefecto_fisico`
+--
+ALTER TABLE `tdefecto_fisico`
+  ADD CONSTRAINT `tdefecto_fisico_ibfk_1` FOREIGN KEY (`idpersona`) REFERENCES `tpersona` (`idpersona`);
 
 --
 -- Filtros para la tabla `tdepartamento`
@@ -2717,8 +2935,7 @@ ALTER TABLE `tdepartamento`
 ALTER TABLE `tdependiente`
   ADD CONSTRAINT `tdependiente_ibfk_1` FOREIGN KEY (`idparentesco`) REFERENCES `tparentesco` (`idparentesco`),
   ADD CONSTRAINT `tdependiente_ibfk_2` FOREIGN KEY (`idestado_civil`) REFERENCES `testado_civil` (`idestado_civil`),
-  ADD CONSTRAINT `tdependiente_ibfk_3` FOREIGN KEY (`idasegurado`) REFERENCES `tasegurado` (`idasegurado`),
-  ADD CONSTRAINT `tdependiente_ibfk_4` FOREIGN KEY (`idcondicion`) REFERENCES `tcondicion` (`idcondicion`);
+  ADD CONSTRAINT `tdependiente_ibfk_3` FOREIGN KEY (`idasegurado`) REFERENCES `tasegurado` (`idasegurado`);
 
 --
 -- Filtros para la tabla `tdireccion`
@@ -2746,6 +2963,18 @@ ALTER TABLE `thijos`
   ADD CONSTRAINT `thijos_ibfk_1` FOREIGN KEY (`idpersona`) REFERENCES `tpersona` (`idpersona`);
 
 --
+-- Filtros para la tabla `tmontos_asegurado`
+--
+ALTER TABLE `tmontos_asegurado`
+  ADD CONSTRAINT `tmontos_asegurado_ibfk_1` FOREIGN KEY (`idasegurado`) REFERENCES `tasegurado` (`idasegurado`);
+
+--
+-- Filtros para la tabla `tmontos_dependiente`
+--
+ALTER TABLE `tmontos_dependiente`
+  ADD CONSTRAINT `tmontos_dependiente_ibfk_1` FOREIGN KEY (`iddependiente`) REFERENCES `tdependiente` (`iddependiente`);
+
+--
 -- Filtros para la tabla `tmunicipios`
 --
 ALTER TABLE `tmunicipios`
@@ -2761,7 +2990,8 @@ ALTER TABLE `tparroquias`
 -- Filtros para la tabla `tpersona`
 --
 ALTER TABLE `tpersona`
-  ADD CONSTRAINT `tpersona_ibfk_3` FOREIGN KEY (`idestado_civil`) REFERENCES `testado_civil` (`idestado_civil`);
+  ADD CONSTRAINT `tpersona_ibfk_3` FOREIGN KEY (`idestado_civil`) REFERENCES `testado_civil` (`idestado_civil`),
+  ADD CONSTRAINT `tpersona_ibfk_4` FOREIGN KEY (`idingreso`) REFERENCES `tingreso` (`idingreso`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Filtros para la tabla `treferencias`

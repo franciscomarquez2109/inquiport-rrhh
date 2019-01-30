@@ -38,8 +38,18 @@ class class_tablePrima extends bd {
         $this->estatus = "";   
     }
 
-/*FUNCION PARA MODIFICAR clave*/
-public function selectTablePrima($sql){
+
+public function UpdateTablePrima($sql){
+	$sql = $sql;
+	$this->ejecutar($sql);
+	
+}
+public function InsertTablePrima($sql){
+	$sql = $sql;
+	$this->ejecutar($sql);
+	
+}
+public function SelectTablePrima($sql){
 	$sql = $sql;
 	$this->ejecutar($sql);
 	

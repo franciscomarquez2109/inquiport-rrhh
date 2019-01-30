@@ -13,6 +13,7 @@ while ($row = $objTablePrima->row()) {
       <th>Prima Quincenal</th>
       <th>Prima Ejecutiva</th>
     </thead>
+    <form>
     <tr>
       <td  class="col-xs-1">
         <input type="text" name="numero[]" id="nnumero" placeholder="N°" class="form-control name_list input-sm" value="'.$row['numero'].'" readOnly/>
@@ -27,7 +28,9 @@ while ($row = $objTablePrima->row()) {
         <input type="text" name="prima_ejecutivo[]" id="prima_ejecutivo" placeholder="000.000 Bs.S" class="form-control name_list input-sm" value="'.number_format($row['prima_ejecutivo'], 2, ',', '.').'"/>
       </td>
     </tr>
+    
   </table>';
 }
+
 echo $html;
 ?>
